@@ -66,7 +66,7 @@ I'm an innovative and technically versatile software engineer with a B.Sc. in Co
 
 ## 📫 Contact
 
-- **Email:** your.email@example.com
+- **Email:** chidiisking7@gmail.com.com
 - **GitHub:** [Chidi09](https://github.com/Chidi09)
 - **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/yourname)
 
