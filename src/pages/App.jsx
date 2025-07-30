@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } => from 'react';
 // Import actual icons from lucide-react
 import {
   Menu,
@@ -14,6 +14,7 @@ import {
   Award,
   Sun, // For light mode icon
   Moon, // For dark mode icon
+  MessageSquareText, // Using for WhatsApp - a chat bubble icon
   // Specific icons for skills
   Atom, // Represents React
   Server, // Represents Node.js, Backend (FastAPI)
@@ -21,7 +22,7 @@ import {
   GitBranch, // Represents Git/GitHub
   Database, // Represents MongoDB, PostgreSQL, Firebase (as a database)
   Cloud, // Represents cloud systems like Firebase, AWS
-  MessageSquare, // For NLP, Sentiment, Propaganda Detection
+  MessageSquare, // For NLP, Sentiment, Propaganda Detection (already imported, using MessageSquareText for WhatsApp)
   Palette, // For Tailwind CSS, Smart Theming
   Bot, // For Discord Bot, AI-Checker Systems
   FileText, // For Prompt Engineering, Summarizer Model
@@ -41,17 +42,18 @@ const personalData = {
   email: "your.email@example.com", // Replace with your actual email
   github: "https://github.com/Chidi09", // Replace with your actual GitHub URL
   linkedin: "https://linkedin.com/in/yourname", // Replace with your actual LinkedIn URL
+  whatsapp: "https://wa.me/+2347019008948", // UPDATED: Your actual WhatsApp number
   currentYear: new Date().getFullYear(),
   education: {
     degree: "B.Sc., Computer Science",
-    university: "Crawford University", // UPDATED: School name
+    university: "Crawford University",
     location: "Lagos, Nigeria",
     years: "2021 – 2025",
-    standing: "Second Class Upper (if applicable)", // User to confirm/update
+    standing: "", // Removed "Second Class Upper"
     coursework: "Software Engineering, AI & ML, Web Architecture"
   },
   certifications: [
-    "Full-Stack Web Development", // UPDATED: Removed brackets and extra text
+    "Full-Stack Web Development",
     "AI for Developers",
     "Python and API Automation",
     "Project Management in Practice"
@@ -97,7 +99,7 @@ const getSkillIcon = (skillName, className) => {
 const projects = [
   {
     title: "FluxPay – Crypto Payment Provider",
-    tech: ['React', 'Node.js', 'MongoDB'],
+    tech: ['React', 'Node.js', 'MongoDB'], // Keeping original as no specific repo was given for this
     description: "Built an automated payment gateway supporting USDT, Solana, BTC, and ETH. Generated unique wallets per transaction and disbursed payments post admin review. Implemented real-time Naira conversion display for user confidence.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=FluxPay",
     projectUrl: "", // Empty string means no live demo
@@ -105,7 +107,7 @@ const projects = [
   },
   {
     title: "Smart Theming Engine (ChromaShift)",
-    tech: ['React', 'JavaScript', 'Tailwind CSS'],
+    tech: ['Python', 'HTML', 'JavaScript', 'CSS', 'Tailwind CSS'], // UPDATED
     description: "Created an AI-powered theming engine analyzing visual elements to generate UI themes. Extracted color palettes, calculated symmetry, and built responsive components. Integrated into LMS platforms with institutional theming marketplace.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=ChromaShift",
     projectUrl: "",
@@ -113,7 +115,7 @@ const projects = [
   },
   {
     title: "AI Fake News Detection Website",
-    tech: ['Firebase', 'Tailwind', 'Gemini API'],
+    tech: ['HTML', 'CSS', 'Firebase', 'Tailwind CSS', 'Gemini API', 'NLP'], // UPDATED
     description: "Built a bias and sentiment checker using NLP. Designed an interactive news platform to verify content truthfulness. Added user report rewards and community moderation features.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=AI+News",
     projectUrl: "",
@@ -121,7 +123,7 @@ const projects = [
   },
   {
     title: "AI-Powered Student Advisory System",
-    tech: ['Python', 'JS', 'Firebase'],
+    tech: ['Python', 'JavaScript', 'HTML', 'CSS', 'Firebase'], // UPDATED
     description: "Sent academic updates to parents and analyzed per-course student performance. Issued certificates and tracked learning outcomes per semester.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=Student+Advisory",
     projectUrl: "",
@@ -129,7 +131,7 @@ const projects = [
   },
   {
     title: "Project Topic Picker (AI System)",
-    tech: ['React', 'AI APIs'],
+    tech: ['JavaScript', 'Python', 'HTML', 'CSS', 'React', 'AI APIs'], // UPDATED
     description: "Detected duplicate final year project topics using semantic search and prompt chains. Allowed students to submit viable, unique topics with validation.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=Topic+Picker",
     projectUrl: "",
@@ -137,7 +139,7 @@ const projects = [
   },
   {
     title: "Discord Assignment Bot System",
-    tech: ['Node.js', 'MongoDB', 'Discord API'],
+    tech: ['Node.js', 'MongoDB', 'Discord API'], // Keeping original as no specific repo was given for this
     description: "Built a workflow management bot for task posting, status updates, and payment release. Enabled admin approval-based payout and user tracking with admin: true flags.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=Discord+Bot",
     projectUrl: "",
@@ -146,7 +148,7 @@ const projects = [
   // New projects from the provided GitHub links
   {
     title: "Campus Event Manager",
-    tech: ['Unknown'],
+    tech: ['Python', 'Flask', 'SQLAlchemy', 'SQLite', 'HTML', 'CSS', 'JavaScript'], // UPDATED
     description: "A system for managing campus events, enabling task posting, status updates, and more.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=Campus+Event",
     projectUrl: "",
@@ -154,7 +156,7 @@ const projects = [
   },
   {
     title: "Audio LMS",
-    tech: ['Unknown'],
+    tech: ['Python', 'WebRTC', 'Flask-SocketIO'], // UPDATED
     description: "An audio-based Learning Management System for flexible learning.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=Audio+LMS",
     projectUrl: "",
@@ -162,7 +164,7 @@ const projects = [
   },
   {
     title: "Summarizer Model",
-    tech: ['Unknown'],
+    tech: ['JavaScript', 'NLP'], // UPDATED
     description: "A text summarization model for condensing information efficiently.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=Summarizer",
     projectUrl: "",
@@ -170,7 +172,7 @@ const projects = [
   },
   {
     title: "Course Model",
-    tech: ['Unknown'],
+    tech: ['Python'], // UPDATED
     description: "A system for structuring and managing course data.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=Course+Model",
     projectUrl: "",
@@ -178,7 +180,7 @@ const projects = [
   },
   {
     title: "EduAuth",
-    tech: ['Unknown'],
+    tech: ['Python'], // UPDATED
     description: "An authentication system designed for educational platforms.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=EduAuth",
     projectUrl: "",
@@ -186,7 +188,7 @@ const projects = [
   },
   {
     title: "Web App",
-    tech: ['Unknown'],
+    tech: ['TypeScript', 'HTML', 'CSS'], // UPDATED
     description: "A general web application project.",
     imageUrl: "https://placehold.co/600x400/e2e8f0/4a5568?text=Web+App",
     projectUrl: "",
@@ -249,7 +251,7 @@ const App = () => {
             onClick={() => scrollToSection('hero')}
             className="text-2xl font-extrabold text-gray-900 dark:text-indigo-300 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors tracking-tight"
           >
-            Chidi.jsx {/* UPDATED: Site title */}
+            Chidi.jsx
           </a>
 
           {/* Desktop Navigation */}
@@ -423,9 +425,13 @@ const App = () => {
         <div className="relative z-10 max-w-4xl mx-auto">
           {/* Profile Image */}
           <div className="w-36 h-36 md:w-48 md:h-48 bg-gray-300 rounded-full mx-auto mb-8 overflow-hidden shadow-xl border-4 border-white transform transition-transform duration-500 hover:scale-105 animate-fade-in-up dark:bg-gray-700 dark:border-gray-800">
-            {/* Replace this placeholder URL with your actual profile picture URL */}
+            {/*
+              ACTION REQUIRED: Replace the 'src' attribute below with your actual profile picture URL.
+              Example: src="/images/your-profile-pic.jpg" or src="https://your-cdn.com/profile.png"
+              Ensure the image is publicly accessible.
+            */}
             <img
-              src="https://placehold.co/192x192/cbd5e1/4a5568?text=Profile"
+              src="https://placehold.co/192x192/cbd5e1/4a5568?text=Profile" // REPLACE THIS URL
               alt="Profile Picture"
               className="w-full h-full object-cover"
               onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/192x192/cbd5e1/4a5568?text=Profile'; }}
@@ -469,9 +475,13 @@ const App = () => {
           </h2>
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 animate-fade-in-up delay-100">
-              {/* Replace this placeholder URL with a relevant image for your About section */}
+              {/*
+                ACTION REQUIRED: Replace the 'src' attribute below with a relevant image for your About section.
+                Example: src="/images/about-me.jpg" or src="https://your-cdn.com/about.png"
+                Ensure the image is publicly accessible.
+              */}
               <img
-                src="https://placehold.co/600x400/e2e8f0/4a5568?text=About+Image"
+                src="https://placehold.co/600x400/e2e8f0/4a5568?text=About+Image" // REPLACE THIS URL
                 alt="About Me"
                 className="rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-102"
                 onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/e2e8f0/4a5568?text=About+Image'; }}
@@ -501,7 +511,7 @@ const App = () => {
                 <p className="text-md text-gray-600 dark:text-gray-400">{personalData.education.years}</p>
               </div>
             </div>
-            {personalData.education.standing && (
+            {personalData.education.standing && ( // This conditional rendering ensures it only shows if 'standing' has a value
               <p className="text-gray-700 dark:text-gray-300 mb-2">
                 <span className="font-semibold">Academic Standing:</span> {personalData.education.standing}
               </p>
@@ -571,9 +581,13 @@ const App = () => {
                 dark:bg-gray-700 dark:bg-opacity-80 dark:text-gray-200"
                 style={{ animationDelay: `${0.1 * index}s` }}
               >
-                {/* Replace this placeholder URL with your actual project screenshot */}
+                {/*
+                  ACTION REQUIRED: Replace the 'src' attribute below with your actual project screenshot URL.
+                  Example: src="/images/fluxpay-screenshot.jpg" or src="https://your-cdn.com/project-screenshot.png"
+                  Ensure the image is publicly accessible.
+                */}
                 <img
-                  src={project.imageUrl}
+                  src={project.imageUrl} // REPLACE THIS URL
                   alt={project.title}
                   className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
                   onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/e2e8f0/4a5568?text=Project'; }}
@@ -687,6 +701,10 @@ const App = () => {
             </a>
             <a href={personalData.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 transition-colors dark:text-blue-400 dark:hover:text-blue-300" aria-label="LinkedIn Profile">
               <Linkedin className="w-8 h-8" />
+            </a>
+            {/* New WhatsApp Link */}
+            <a href={personalData.whatsapp} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 transition-colors dark:text-green-400 dark:hover:text-green-300" aria-label="WhatsApp">
+              <MessageSquareText className="w-8 h-8" />
             </a>
             {/* Add more social links as needed */}
           </div>
