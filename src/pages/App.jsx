@@ -1,4 +1,4 @@
-import React, { useState, useEffect } => from 'react';
+import React, { useState, useEffect } from 'react';
 // Import actual icons from lucide-react
 import {
   Menu,
@@ -14,7 +14,8 @@ import {
   Award,
   Sun, // For light mode icon
   Moon, // For dark mode icon
-  MessageSquareText, // Using for WhatsApp - a chat bubble icon
+  Twitter, // Added: Twitter icon
+  // MessageSquareText, // Removed: Replaced with inline SVG for WhatsApp
   // Specific icons for skills
   Atom, // Represents React
   Server, // Represents Node.js, Backend (FastAPI)
@@ -22,7 +23,7 @@ import {
   GitBranch, // Represents Git/GitHub
   Database, // Represents MongoDB, PostgreSQL, Firebase (as a database)
   Cloud, // Represents cloud systems like Firebase, AWS
-  MessageSquare, // For NLP, Sentiment, Propaganda Detection (already imported, using MessageSquareText for WhatsApp)
+  MessageSquare, // For NLP, Sentiment, Propaganda Detection
   Palette, // For Tailwind CSS, Smart Theming
   Bot, // For Discord Bot, AI-Checker Systems
   FileText, // For Prompt Engineering, Summarizer Model
@@ -42,7 +43,8 @@ const personalData = {
   email: "your.email@example.com", // Replace with your actual email
   github: "https://github.com/Chidi09", // Replace with your actual GitHub URL
   linkedin: "https://linkedin.com/in/yourname", // Replace with your actual LinkedIn URL
-  whatsapp: "https://wa.me/+2347019008948", // UPDATED: Your actual WhatsApp number
+  whatsapp: "https://wa.me/+2347019008948", // Your actual WhatsApp number
+  twitter: "https://twitter.com/Benimaru177", // ADDED: Your Twitter URL
   currentYear: new Date().getFullYear(),
   education: {
     degree: "B.Sc., Computer Science",
@@ -511,11 +513,6 @@ const App = () => {
                 <p className="text-md text-gray-600 dark:text-gray-400">{personalData.education.years}</p>
               </div>
             </div>
-            {personalData.education.standing && ( // This conditional rendering ensures it only shows if 'standing' has a value
-              <p className="text-gray-700 dark:text-gray-300 mb-2">
-                <span className="font-semibold">Academic Standing:</span> {personalData.education.standing}
-              </p>
-            )}
             {personalData.education.coursework && (
               <p className="text-gray-700 dark:text-gray-300">
                 <span className="font-semibold">Relevant Coursework:</span> {personalData.education.coursework}
@@ -702,9 +699,27 @@ const App = () => {
             <a href={personalData.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 transition-colors dark:text-blue-400 dark:hover:text-blue-300" aria-label="LinkedIn Profile">
               <Linkedin className="w-8 h-8" />
             </a>
-            {/* New WhatsApp Link */}
+            {/* WhatsApp Icon (Inline SVG) */}
             <a href={personalData.whatsapp} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 transition-colors dark:text-green-400 dark:hover:text-green-300" aria-label="WhatsApp">
-              <MessageSquareText className="w-8 h-8" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="currentColor"
+                strokeWidth="0" // Set strokeWidth to 0 for a solid fill
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-whatsapp"
+              >
+                <path d="M23 12a11 11 0 0 0-11-11A11 11 0 0 0 1 12a11 11 0 0 0 11 11c.01 0 .02 0 .03 0a10.95 10.95 0 0 0 6.31-2.02l3.66 1.15a1 1 0 0 0 1.25-1.25l-1.15-3.66A10.95 10.95 0 0 0 23 12zM12 21a9 9 0 0 1-7.8-4.57l-.54-.92-3.11 1-.95-3.08a9 9 0 0 1 17.4-3.8c0 0 0 0 0 0V12a9 9 0 0 1-9 9z" />
+                <path d="M17.5 14.5a.5.5 0 0 0-.25-.43l-3.5-2a.5.5 0 0 0-.5-.07l-2.5 1.5a.5.5 0 0 0-.25.43v1.5a.5.5 0 0 0 .5.5h.5a.5.5 0 0 0 .5-.5v-1l2-1.2 3 1.75a.5.5 0 0 0 .5-.43v-.5z" />
+              </svg>
+            </a>
+            {/* New Twitter Link */}
+            <a href={personalData.twitter} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 transition-colors dark:text-blue-400 dark:hover:text-blue-300" aria-label="Twitter Profile">
+              <Twitter className="w-8 h-8" />
             </a>
             {/* Add more social links as needed */}
           </div>
