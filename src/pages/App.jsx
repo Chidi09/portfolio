@@ -135,15 +135,7 @@ const projects = [
     githubUrl: "",
     category: "FinTech"
   },
-  {
-    title: "FluxPay",
-    tech: ['React', 'Node.js', 'MongoDB'],
-    description: "Automated crypto payment gateway supporting USDT, Solana, BTC, and ETH.",
-    fallbackImage: "https://placehold.co/1280x800/e2e8f0/4a5568?text=FluxPay+Crypto",
-    projectUrl: "",
-    githubUrl: "https://github.com/Chidi09/fluxpay-repo-link-if-any",
-    category: "Web3"
-  },
+
   {
     title: "Smart Theming Engine",
     tech: ['Python', 'AI/ML'],
