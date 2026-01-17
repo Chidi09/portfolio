@@ -12,7 +12,7 @@ const personalData = {
   tagline: "Software Engineer",
   fullTagline: "Building digital experiences that merge high-performance engineering with exquisite design.",
   aboutMe: "I am a Software Engineer who bridges the gap between raw code and human experience. With a B.Sc. in Computer Science and a portfolio spanning FinTech, Real Estate, and AI, I don't just build websites—I engineer ecosystems. Creator of FluxPay and VarianTrade, I specialize in scalable architectures (React, Go, Python) that feel magical to use.",
-  email: "your.email@example.com", 
+  email: "chidiisking7@gmail.com", 
   github: "https://github.com/Chidi09",
   linkedin: "https://linkedin.com/in/yourname",
   whatsapp: "https://wa.me/+2347019008948",
