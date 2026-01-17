@@ -148,7 +148,7 @@ const projects = [
     title: "Campus Manager",
     tech: ['Python', 'Flask'],
     description: "Comprehensive system for managing campus events and tasks.",
-    fallbackImage: "https://images.unsplash.com/photo-1541339907198-e08759dfac3f?auto=format&fit=crop&q=80&w=1600",
+    fallbackImage: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/campus-event-manager",
     category: "Management"
