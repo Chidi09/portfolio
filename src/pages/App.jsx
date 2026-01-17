@@ -153,6 +153,42 @@ const projects = [
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/campus-event-manager",
     category: "Management"
+  },
+  {
+    title: "School Management SaaS",
+    tech: ['Python', 'FastAPI', 'PostgreSQL'],
+    description: "Multi-tenant SaaS platform empowering schools with digital governance and online learning capabilities.",
+    fallbackImage: "https://placehold.co/1280x800/1e293b/ffffff?text=School+SaaS&font=roboto",
+    projectUrl: "",
+    githubUrl: "https://github.com/Chidi09/school-management-saas-",
+    category: "Education"
+  },
+  {
+    title: "Summarizer AI Model",
+    tech: ['JavaScript', 'GPT API', 'Node.js'],
+    description: "AI-powered text summarization engine for distilling complex documents into readable summaries.",
+    fallbackImage: "https://placehold.co/1280x800/7c3aed/ffffff?text=AI+Summarizer&font=roboto",
+    projectUrl: "",
+    githubUrl: "https://github.com/Chidi09/summarizer-model",
+    category: "AI Tool"
+  },
+  {
+    title: "Fake News Detector",
+    tech: ['Python', 'TensorFlow', 'NLP'],
+    description: "Machine learning classifier designed to analyze linguistic patterns and identify misinformation.",
+    fallbackImage: "https://placehold.co/1280x800/991b1b/ffffff?text=Truth+Engine&font=roboto",
+    projectUrl: "",
+    githubUrl: "https://github.com/Chidi09/fake-news-detector",
+    category: "AI Tool"
+  },
+  {
+    title: "Crawford Podcast App",
+    tech: ['TypeScript', 'React', 'Firebase'],
+    description: "Digital audio ecosystem for university broadcasting and educational content delivery.",
+    fallbackImage: "https://placehold.co/1280x800/0369a1/ffffff?text=Podcast+App&font=roboto",
+    projectUrl: "",
+    githubUrl: "https://github.com/Chidi09/crawford-podcast-app",
+    category: "Media"
   }
 ];
 
@@ -204,7 +240,9 @@ const App = () => {
       case 'Real Estate': return <Building className="w-3 h-3" />;
       case 'E-Commerce': return <ShoppingCart className="w-3 h-3" />;
       case 'Web3': return <Key className="w-3 h-3" />;
-      case 'Agriculture': return <Server className="w-3 h-3" />; // Using Server as a placeholder or maybe another icon
+      case 'Agriculture': return <Server className="w-3 h-3" />;
+      case 'Education': return <GraduationCap className="w-3 h-3" />;
+      case 'AI Tool': return <Cpu className="w-3 h-3" />;
       default: return <Globe className="w-3 h-3" />;
     }
   }
