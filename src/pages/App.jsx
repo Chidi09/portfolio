@@ -148,7 +148,7 @@ const projects = [
     title: "Campus Manager",
     tech: ['Python', 'Flask'],
     description: "Comprehensive system for managing campus events and tasks.",
-    fallbackImage: "https://images.unsplash.com/photo-1523050335192-ce1638363191?auto=format&fit=crop&q=80&w=1600",
+    fallbackImage: "https://images.unsplash.com/photo-1541339907198-e08759dfac3f?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/campus-event-manager",
     category: "Management"
@@ -393,17 +393,19 @@ const App = () => {
                   <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse" />
 
                   {/* Image Container with optional Glitch Effect */}
-                  <div className={`absolute inset-0 w-full h-full transition-all duration-700 ${!project.projectUrl ? 'glitch-overlay' : 'group-hover:scale-105'}`}>
-                    <img
-                      src={getProjectImage(project)}
-                      alt={project.title}
-                      className={`w-full h-full object-cover object-top ${!project.projectUrl ? 'code-glitch-active opacity-80' : ''}`}
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = project.fallbackImage;
-                        e.target.classList.remove('object-top');
-                      }}
-                    />
+                  <div className="absolute inset-0 w-full h-full transition-all duration-700 group-hover:scale-105">
+                    <div className={`absolute inset-0 w-full h-full ${!project.projectUrl ? 'glitch-overlay' : ''}`}>
+                      <img
+                        src={getProjectImage(project)}
+                        alt={project.title}
+                        className={`w-full h-full object-cover object-top ${!project.projectUrl ? 'code-glitch-active opacity-80' : ''}`}
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = project.fallbackImage;
+                          e.target.classList.remove('object-top');
+                        }}
+                      />
+                    </div>
                   </div>
 
                   {/* Overlay Gradient on Hover */}
