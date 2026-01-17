@@ -67,7 +67,7 @@ const projects = [
     title: "EG Group",
     tech: ['React', 'Vite', 'Tailwind'],
     description: "A diversified conglomerate redefining standards in Agriculture, Construction, and Media. Leveraging global partnerships to drive economic growth.",
-    fallbackImage: "https://placehold.co/1280x800/0f172a/ffffff?text=EG+Group&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "https://erstegraceland.net/",
     githubUrl: "",
     category: "Agriculture"
@@ -76,7 +76,7 @@ const projects = [
     title: "2GEES Impacts",
     tech: ['React', 'Vite', 'Tailwind'],
     description: "Luxury real estate and hospitality management platform. Crafting bespoke identities for global brands, including the Urum Integrated Resort.",
-    fallbackImage: "https://placehold.co/1280x800/1e293b/ffffff?text=2GEES+Impacts&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "https://2-gees-website.vercel.app/",
     githubUrl: "",
     category: "Real Estate"
@@ -85,7 +85,7 @@ const projects = [
     title: "VarianTrade",
     tech: ['Angular', 'Python', 'Go', 'PostgreSQL'],
     description: "A comprehensive AI-Powered Trading & Betting Platform with real-time arbitrage detection.",
-    fallbackImage: "https://placehold.co/1280x800/0f172a/ffffff?text=VarianTrade+Platform&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1611974715853-26d305b986c1?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "https://variantrades.com",
     githubUrl: "",
     category: "FinTech"
@@ -94,7 +94,7 @@ const projects = [
     title: "Nigerian China Invest",
     tech: ['React', 'Vite', 'Golang', 'Supabase'],
     description: "Robust investment portal with trade opportunities and cart-based ordering systems.",
-    fallbackImage: "https://placehold.co/1280x800/991b1b/ffffff?text=Investment+Portal&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "https://www.nigerianchinainvestmentclub.com",
     githubUrl: "",
     category: "E-Commerce"
@@ -103,7 +103,7 @@ const projects = [
     title: "Grandkonsul Gardens",
     tech: ['React', 'Tailwind', 'Framer Motion'],
     description: "Premium real estate platform with smooth animations and SEO optimization.",
-    fallbackImage: "https://placehold.co/1280x800/004d40/c5a059?text=Grandkonsul+Estates&font=playfair-display",
+    fallbackImage: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "https://grandkonsulgardens.com",
     githubUrl: "",
     category: "Real Estate"
@@ -112,7 +112,7 @@ const projects = [
     title: "Cliftonville Gardens",
     tech: ['React', 'Vite', 'Tailwind'],
     description: "Modern supported living community website with mobile-first design.",
-    fallbackImage: "https://placehold.co/1280x800/003399/ffffff?text=Cliftonville+Gardens&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1582213726852-2996287f3529?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "https://www.cliftonvillegardens.com",
     githubUrl: "https://github.com/Chidi09/Clifton-ville-website",
     category: "Healthcare"
@@ -121,7 +121,7 @@ const projects = [
     title: "Cliftonville Farms",
     tech: ['React', 'Vite', 'Tailwind'],
     description: "Digital presence for agricultural operations showcasing sustainable produce.",
-    fallbackImage: "https://placehold.co/1280x800/166534/ffffff?text=Cliftonville+Farms&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "https://www.cliftonvillefarms.com",
     githubUrl: "",
     category: "Agriculture"
@@ -130,17 +130,16 @@ const projects = [
     title: "Finnitrex",
     tech: ['Next.js', 'React', 'Tailwind'],
     description: "High-performance financial technology interface designed for speed.",
-    fallbackImage: "https://placehold.co/1280x800/4f46e5/ffffff?text=Finnitrex+Finance&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "https://www.finnitrex.com",
     githubUrl: "",
     category: "FinTech"
   },
-
   {
     title: "Smart Theming Engine",
     tech: ['Python', 'AI/ML'],
     description: "AI-powered engine analyzing visuals to generate automatic UI themes.",
-    fallbackImage: "https://placehold.co/1280x800/7c3aed/ffffff?text=AI+Theming+Engine",
+    fallbackImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/smart-theming-engine",
     category: "AI Tool"
@@ -149,7 +148,7 @@ const projects = [
     title: "Campus Manager",
     tech: ['Python', 'Flask'],
     description: "Comprehensive system for managing campus events and tasks.",
-    fallbackImage: "https://placehold.co/1280x800/f59e0b/ffffff?text=Campus+Manager",
+    fallbackImage: "https://images.unsplash.com/photo-1523050335192-ce1638363191?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/campus-event-manager",
     category: "Management"
@@ -158,7 +157,7 @@ const projects = [
     title: "School Management SaaS",
     tech: ['Python', 'FastAPI', 'PostgreSQL'],
     description: "Multi-tenant SaaS platform empowering schools with digital governance and online learning capabilities.",
-    fallbackImage: "https://placehold.co/1280x800/1e293b/ffffff?text=School+SaaS&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/school-management-saas-",
     category: "Education"
@@ -167,7 +166,7 @@ const projects = [
     title: "Summarizer AI Model",
     tech: ['JavaScript', 'GPT API', 'Node.js'],
     description: "AI-powered text summarization engine for distilling complex documents into readable summaries.",
-    fallbackImage: "https://placehold.co/1280x800/7c3aed/ffffff?text=AI+Summarizer&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/summarizer-model",
     category: "AI Tool"
@@ -176,7 +175,7 @@ const projects = [
     title: "Fake News Detector",
     tech: ['Python', 'TensorFlow', 'NLP'],
     description: "Machine learning classifier designed to analyze linguistic patterns and identify misinformation.",
-    fallbackImage: "https://placehold.co/1280x800/991b1b/ffffff?text=Truth+Engine&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/fake-news-detector",
     category: "AI Tool"
@@ -185,7 +184,7 @@ const projects = [
     title: "Crawford Podcast App",
     tech: ['TypeScript', 'React', 'Firebase'],
     description: "Digital audio ecosystem for university broadcasting and educational content delivery.",
-    fallbackImage: "https://placehold.co/1280x800/0369a1/ffffff?text=Podcast+App&font=roboto",
+    fallbackImage: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1600",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/crawford-podcast-app",
     category: "Media"
@@ -389,32 +388,40 @@ const App = () => {
                   href={project.projectUrl || '#'}
                   target={project.projectUrl ? "_blank" : "_self"}
                   rel="noopener noreferrer"
-                  className={`block relative aspect-[16/10] overflow-hidden ${!project.projectUrl && 'cursor-default'}`}
+                  className={`block relative aspect-[16/10] overflow-hidden ${!project.projectUrl ? 'cursor-default' : ''}`}
                 >
-                  <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse" /> {/* Loading Skeleton Placeholder */}
-                  <img
-                    src={getProjectImage(project)}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = project.fallbackImage;
-                      e.target.classList.remove('object-top'); // Fallback might center better
-                    }}
-                  />
+                  <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse" />
+
+                  {/* Image Container with optional Glitch Effect */}
+                  <div className={`absolute inset-0 w-full h-full transition-all duration-700 ${!project.projectUrl ? 'glitch-overlay' : 'group-hover:scale-105'}`}>
+                    <img
+                      src={getProjectImage(project)}
+                      alt={project.title}
+                      className={`w-full h-full object-cover object-top ${!project.projectUrl ? 'code-glitch-active opacity-80' : ''}`}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = project.fallbackImage;
+                        e.target.classList.remove('object-top');
+                      }}
+                    />
+                  </div>
 
                   {/* Overlay Gradient on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     {project.projectUrl ? (
                       <span className="text-white text-sm font-bold flex items-center gap-2">
                         Visit Live Site <ExternalLink className="w-4 h-4" />
                       </span>
+                    ) : (project.githubUrl ? (
+                      <span className="text-white text-sm font-bold flex items-center gap-2">
+                        Explore Source Code <Github className="w-4 h-4" />
+                      </span>
                     ) : (
-                      <span className="text-white/70 text-sm font-bold">Coming Soon</span>
-                    )}
+                      <span className="text-white/70 text-sm font-bold">Internal Engine / Prototype</span>
+                    ))}
                   </div>
 
-                  <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 flex items-center gap-2 shadow-sm">
+                  <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 flex items-center gap-2 shadow-sm z-20">
                     {getCategoryIcon(project.category)} {project.category}
                   </div>
                 </a>
