@@ -3,9 +3,7 @@ import {
   Menu,
   X,
   Code,
-  Briefcase,
   Mail,
-  User,
   Github,
   Linkedin,
   ExternalLink,
@@ -20,18 +18,14 @@ import {
   GitBranch,
   Database,
   Cloud,
-  MessageSquare,
   Palette,
-  Bot,
   FileText,
   Cpu,
-  LayoutDashboard,
   Key,
-  Monitor,
-  Globe,       // New: For general web
-  TrendingUp,  // New: For Trading/Finance
-  Building,    // New: For Real Estate
-  ShoppingCart // New: For E-commerce
+  Globe,
+  TrendingUp,
+  Building,
+  ShoppingCart
 } from 'lucide-react';
 
 // Define your personal and project data here
@@ -40,7 +34,7 @@ const personalData = {
   tagline: "Software Engineer & Product Creator",
   fullTagline: "A passionate Full-Stack Developer crafting innovative and user-centric web solutions.",
   aboutMe: "Innovative and technically versatile software engineer with a B.Sc. in Computer Science and a strong record of building AI-driven platforms, full-stack web applications, and smart system tools. Creator of FluxPay, Smart Theming Engine, and multiple intelligent platforms across LMS, crypto, news, and education. Skilled in React, FastAPI, Node.js, Firebase, and cloud systems. Passionate about designing scalable architectures and building products that solve real-world problems.",
-  email: "your.email@example.com", // Replace with your actual email
+  email: "your.email@example.com", 
   github: "https://github.com/Chidi09",
   linkedin: "https://linkedin.com/in/yourname",
   whatsapp: "https://wa.me/+2347019008948",
@@ -79,7 +73,7 @@ const getSkillIcon = (skillName, className) => {
     case 'HTML': case 'JavaScript': return <Code className={className} />;
     case 'FastAPI': case 'Python': return <Server className={className} />;
     case 'Node.js': return <Server className={className} />;
-    case 'Golang': return <Terminal className={className} />; // Represents backend power
+    case 'Golang': return <Terminal className={className} />; 
     case 'Firebase': case 'Supabase': return <Cloud className={className} />;
     case 'MongoDB': case 'PostgreSQL': return <Database className={className} />;
     case 'Gemini API': return <Cpu className={className} />;
@@ -93,9 +87,8 @@ const projects = [
   {
     title: "VarianTrade",
     tech: ['Angular', 'Python', 'Node.js', 'Golang', 'PostgreSQL'],
-    description: "A comprehensive AI-Powered Trading & Betting Platform. Features real-time algorithmic trading, arbitrage detection across bookmakers, and portfolio management. Built with a microservices architecture including a high-performance matching engine.",
-    // Dark tech blue background, white text
-    imageUrl: "https://placehold.co/800x500/0f172a/ffffff?text=VarianTrade+AI+Platform&font=roboto", 
+    description: "A comprehensive AI-Powered Trading & Betting Platform. Features real-time algorithmic trading, arbitrage detection across bookmakers, and portfolio management.",
+    fallbackImage: "https://placehold.co/800x500/0f172a/ffffff?text=VarianTrade+AI+Platform&font=roboto", 
     projectUrl: "https://variantrades.com",
     githubUrl: "",
     category: "FinTech"
@@ -103,9 +96,8 @@ const projects = [
   {
     title: "Nigerian China Investment Club",
     tech: ['React', 'Vite', 'Golang', 'Supabase'],
-    description: "A robust investment and e-commerce portal. Features member-only dashboards, trade opportunity postings, investment pitch submission systems, and cart-based ordering with multiple item support.",
-    // Red and dark background (Flag colors hint)
-    imageUrl: "https://placehold.co/800x500/991b1b/ffffff?text=Investment+Club+Portal&font=roboto",
+    description: "A robust investment and e-commerce portal. Features member-only dashboards, trade opportunity postings, and cart-based ordering with multiple item support.",
+    fallbackImage: "https://placehold.co/800x500/991b1b/ffffff?text=Investment+Club+Portal&font=roboto",
     projectUrl: "https://www.nigerianchinainvestmentclub.com",
     githubUrl: "",
     category: "E-Commerce"
@@ -113,9 +105,8 @@ const projects = [
   {
     title: "Grandkonsul Gardens",
     tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-    description: "A premium real estate website featuring smooth animations and SEO optimization. Implements a 'Grand Green' and 'Gold' aesthetic with responsive galleries to showcase luxury properties.",
-    // Emerald green background, Gold text
-    imageUrl: "https://placehold.co/800x500/004d40/c5a059?text=Grandkonsul+Properties&font=playfair-display",
+    description: "A premium real estate website featuring smooth animations and SEO optimization. Implements a 'Grand Green' and 'Gold' aesthetic.",
+    fallbackImage: "https://placehold.co/800x500/004d40/c5a059?text=Grandkonsul+Properties&font=playfair-display",
     projectUrl: "https://grandkonsulgardens.com",
     githubUrl: "",
     category: "Real Estate"
@@ -124,8 +115,7 @@ const projects = [
     title: "Cliftonville Gardens",
     tech: ['React', 'Vite', 'Tailwind v4', 'Framer Motion'],
     description: "A modern multi-page website for a supported living community. Features a mobile-first design, smooth page transitions, and a clean professional UI matching the Royal Blue & Orange brand identity.",
-    // Royal Blue background, White text
-    imageUrl: "https://placehold.co/800x500/003399/ffffff?text=Cliftonville+Gardens&font=roboto",
+    fallbackImage: "https://placehold.co/800x500/003399/ffffff?text=Cliftonville+Gardens&font=roboto",
     projectUrl: "https://www.cliftonvillegardens.com",
     githubUrl: "https://github.com/Chidi09/Clifton-ville-website",
     category: "Healthcare"
@@ -133,9 +123,8 @@ const projects = [
   {
     title: "Cliftonville Farms",
     tech: ['React', 'Vite', 'Tailwind CSS'],
-    description: "Digital presence for the agricultural arm of Cliftonville. Showcases sustainable farming practices and produce availability with a focus on accessibility and performance.",
-    // Green/Nature background
-    imageUrl: "https://placehold.co/800x500/166534/ffffff?text=Cliftonville+Farms&font=roboto",
+    description: "Digital presence for the agricultural arm of Cliftonville. Showcases sustainable farming practices and produce availability with a focus on accessibility.",
+    fallbackImage: "https://placehold.co/800x500/166534/ffffff?text=Cliftonville+Farms&font=roboto",
     projectUrl: "https://www.cliftonvillefarms.com",
     githubUrl: "",
     category: "Agriculture"
@@ -144,8 +133,7 @@ const projects = [
     title: "Finnitrex",
     tech: ['Next.js', 'React', 'Tailwind CSS'],
     description: "A high-performance financial technology interface built with Next.js for server-side rendering and optimal SEO. Designed for speed and scalability.",
-    // Modern Purple/Blue gradient feel
-    imageUrl: "https://placehold.co/800x500/4f46e5/ffffff?text=Finnitrex+Finance&font=roboto",
+    fallbackImage: "https://placehold.co/800x500/4f46e5/ffffff?text=Finnitrex+Finance&font=roboto",
     projectUrl: "https://www.finnitrex.com",
     githubUrl: "",
     category: "FinTech"
@@ -154,8 +142,8 @@ const projects = [
     title: "FluxPay – Crypto Payment",
     tech: ['React', 'Node.js', 'MongoDB'], 
     description: "Automated payment gateway supporting USDT, Solana, BTC, and ETH. Generated unique wallets per transaction with real-time currency conversion.",
-    imageUrl: "https://placehold.co/800x500/e2e8f0/4a5568?text=FluxPay+Crypto",
-    projectUrl: "", 
+    fallbackImage: "https://placehold.co/800x500/e2e8f0/4a5568?text=FluxPay+Crypto",
+    projectUrl: "", // No URL, will use fallback
     githubUrl: "https://github.com/Chidi09/fluxpay-repo-link-if-any",
     category: "Web3"
   },
@@ -163,8 +151,8 @@ const projects = [
     title: "Smart Theming Engine",
     tech: ['Python', 'AI/ML', 'Tailwind CSS'],
     description: "AI-powered engine analyzing visual elements to extract color palettes and calculate symmetry, generating automatic UI themes for LMS platforms.",
-    imageUrl: "https://placehold.co/800x500/7c3aed/ffffff?text=ChromaShift+Engine",
-    projectUrl: "",
+    fallbackImage: "https://placehold.co/800x500/7c3aed/ffffff?text=ChromaShift+Engine",
+    projectUrl: "", 
     githubUrl: "https://github.com/Chidi09/smart-theming-engine",
     category: "AI Tool"
   },
@@ -172,7 +160,7 @@ const projects = [
     title: "Campus Event Manager",
     tech: ['Python', 'Flask', 'SQLAlchemy'],
     description: "A comprehensive system for managing campus events, enabling task posting, status updates, and administrative oversight.",
-    imageUrl: "https://placehold.co/800x500/f59e0b/ffffff?text=Campus+Events",
+    fallbackImage: "https://placehold.co/800x500/f59e0b/ffffff?text=Campus+Events",
     projectUrl: "",
     githubUrl: "https://github.com/Chidi09/campus-event-manager",
     category: "Management"
@@ -180,7 +168,6 @@ const projects = [
 ];
 
 
-// Main App component
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
@@ -216,7 +203,6 @@ const App = () => {
     document.documentElement.style.scrollBehavior = 'smooth';
   }, []);
 
-  // Helper to determine Project Category Icon
   const getCategoryIcon = (category) => {
       switch(category) {
           case 'FinTech': return <TrendingUp className="w-4 h-4" />;
@@ -227,11 +213,20 @@ const App = () => {
       }
   }
 
+  // Helper to generate Screenshot URL or return fallback
+  const getProjectImage = (project) => {
+    if (project.projectUrl && project.projectUrl !== "") {
+      // Using Microlink API to generate screenshot on the fly
+      // We encode the URL to ensure it passes correctly
+      const encodedUrl = encodeURIComponent(project.projectUrl);
+      return `https://api.microlink.io/?url=${encodedUrl}&screenshot=true&meta=false&embed=screenshot.url`;
+    }
+    return project.fallbackImage;
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 font-inter text-gray-800 dark:text-gray-200 antialiased transition-colors duration-500">
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
+      
       {/* Header Section */}
       <header className="bg-white bg-opacity-80 backdrop-blur-md shadow-lg py-4 px-6 md:px-12 sticky top-0 z-50 dark:bg-gray-800 dark:bg-opacity-80 transition-colors duration-500">
         <nav className="container mx-auto flex justify-between items-center">
@@ -243,7 +238,6 @@ const App = () => {
             Chidi.jsx
           </a>
 
-          {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-8">
             {['Home', 'About', 'Education', 'Skills', 'Projects', 'Contact'].map((item) => (
               <li key={item}>
@@ -258,7 +252,6 @@ const App = () => {
             ))}
           </ul>
 
-          {/* Dark Mode & Mobile Toggle */}
           <div className="flex items-center space-x-4">
             <button
               className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 p-2 rounded-full transition-colors"
@@ -276,7 +269,6 @@ const App = () => {
           </div>
         </nav>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white bg-opacity-95 backdrop-blur-md shadow-md py-4 mt-2 rounded-lg mx-4 dark:bg-gray-800 dark:bg-opacity-95">
             <ul className="flex flex-col items-center space-y-4">
@@ -298,7 +290,6 @@ const App = () => {
 
       {/* Hero Section */}
       <section id="hero" className="relative flex items-center justify-center min-h-[calc(100vh-80px)] bg-gradient-to-br from-blue-50 to-indigo-100 py-20 px-6 text-center overflow-hidden dark:from-gray-800 dark:to-gray-950 transition-colors duration-500">
-        {/* Background Blobs */}
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute w-64 h-64 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob top-1/4 left-1/4 dark:bg-indigo-700"></div>
           <div className="absolute w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 top-1/2 right-1/4 dark:bg-purple-700"></div>
@@ -398,7 +389,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section - UPDATED WITH SCREENSHOTS */}
       <section id="projects" className="py-20 px-6 md:px-12 bg-gray-100 dark:bg-gray-800 transition-colors duration-500">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-4 animate-fade-in-up">
@@ -416,13 +407,17 @@ const App = () => {
                 style={{ animationDelay: `${0.1 * index}s` }}
               >
                 {/* Image Container with Overlay */}
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-56 overflow-hidden bg-gray-200 dark:bg-gray-600">
                   <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-0 transition-all duration-500 z-10"></div>
                   <img
-                    src={project.imageUrl}
+                    src={getProjectImage(project)}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/e2e8f0/4a5568?text=Project+Preview'; }}
+                    // If screenshot API fails/times out, fallback to the branded placeholder
+                    onError={(e) => { 
+                      e.target.onerror = null; 
+                      e.target.src = project.fallbackImage; 
+                    }}
                   />
                   {/* Category Badge */}
                   <div className="absolute top-4 right-4 z-20 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-indigo-700 dark:text-indigo-300 shadow-sm flex items-center gap-1">
