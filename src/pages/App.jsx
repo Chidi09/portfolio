@@ -64,6 +64,24 @@ const CodeIcon = ({ className }) => (
 
 const projects = [
   {
+    title: "EG Group",
+    tech: ['React', 'Vite', 'Tailwind'],
+    description: "A diversified conglomerate redefining standards in Agriculture, Construction, and Media. Leveraging global partnerships to drive economic growth.",
+    fallbackImage: "https://placehold.co/1280x800/0f172a/ffffff?text=EG+Group&font=roboto",
+    projectUrl: "https://erstegraceland.net/",
+    githubUrl: "",
+    category: "Agriculture"
+  },
+  {
+    title: "2GEES Impacts",
+    tech: ['React', 'Vite', 'Tailwind'],
+    description: "Luxury real estate and hospitality management platform. Crafting bespoke identities for global brands, including the Urum Integrated Resort.",
+    fallbackImage: "https://placehold.co/1280x800/1e293b/ffffff?text=2GEES+Impacts&font=roboto",
+    projectUrl: "https://2-gees-website.vercel.app/",
+    githubUrl: "",
+    category: "Real Estate"
+  },
+  {
     title: "VarianTrade",
     tech: ['Angular', 'Python', 'Go', 'PostgreSQL'],
     description: "A comprehensive AI-Powered Trading & Betting Platform with real-time arbitrage detection.",
@@ -194,6 +212,7 @@ const App = () => {
       case 'Real Estate': return <Building className="w-3 h-3" />;
       case 'E-Commerce': return <ShoppingCart className="w-3 h-3" />;
       case 'Web3': return <Key className="w-3 h-3" />;
+      case 'Agriculture': return <Server className="w-3 h-3" />; // Using Server as a placeholder or maybe another icon
       default: return <Globe className="w-3 h-3" />;
     }
   }
