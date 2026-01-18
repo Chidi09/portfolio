@@ -8,7 +8,9 @@ import {
 
 // IMPORTING YOUR LOCAL IMAGE
 // Ensure '59f8ca04-460f-4995-bd3d-96ab2b52648a.jpeg' is inside the 'src' folder
-import profilePic from './59f8ca04-460f-4995-bd3d-96ab2b52648a.jpeg';
+// We use '../' to go up one folder level to finding the image
+import profilePic from '../59f8ca04-460f-4995-bd3d-96ab2b52648a.jpeg';
+
 
 // --- DATA CONFIGURATION ---
 const personalData = {
