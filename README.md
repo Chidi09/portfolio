@@ -1,7 +1,4 @@
-# portfolio
-Here’s a professional and detailed README.md for your portfolio repository, based on your App.jsx and project info:
 
----
 
 # Chidi09 Portfolio
 
