@@ -64,6 +64,24 @@ export const getSkillIcon = (skillName, className) => {
 
 export const projects = [
   {
+    title: "Anna Digital Academy",
+    tech: ['Next.js', 'React', 'Tailwind'],
+    description: "A specialized incubator platform for African founders, providing practical business education from validation to market launch.",
+    fallbackImage: "https://placehold.co/1280x800/10b981/ffffff?text=Anna+Digital+Academy&font=roboto",
+    projectUrl: "https://www.annadigitalacademy.com/",
+    githubUrl: "",
+    category: "Education"
+  },
+  {
+    title: "Heaven 11 Rewrite",
+    tech: ['Next.js', 'React', 'Tailwind'],
+    description: "A high-performance rewrite of the Heaven 11 platform, leveraging Next.js for optimized rendering, speed, and modern user experience.",
+    fallbackImage: "https://placehold.co/1280x800/0f172a/ffffff?text=Heaven+11&font=roboto",
+    projectUrl: "https://heaven-11-nextjs-rewrite.vercel.app/",
+    githubUrl: "",
+    category: "Real Estate"
+  },
+  {
     title: "SafeMeet",
     tech: ['Next.js', 'Fastify', 'Base', 'Flow'],
     description: "A non-custodial escrow protocol facilitating trustless P2P trades and commitment pacts via decentralized smart contracts and QR handshakes.",
