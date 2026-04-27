@@ -6,7 +6,7 @@ const Header = ({ darkMode, setDarkMode, isMobileMenuOpen, setIsMobileMenuOpen, 
     <header className="fixed w-full top-0 z-50 transition-all duration-300 border-b border-transparent bg-white/70 dark:bg-[#050505]/70 backdrop-blur-md">
       <div className="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         <button onClick={() => scrollToSection('hero')} className="text-xl font-bold tracking-tighter flex items-center gap-2 text-gray-900 dark:text-white group">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">Chidi</span>.jsx
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">Chidi</span>.ts
         </button>
 
         {/* Desktop Nav */}
