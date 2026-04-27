@@ -6,7 +6,8 @@ import {
   SiFlutter, SiSpringboot, SiFastify
 } from 'react-icons/si';
 import { 
-  TrendingUp, Building, ShoppingCart, Globe, Key, Palette, Sparkles
+  TrendingUp, Building, ShoppingCart, Globe, Key, Palette, Sparkles,
+  BookOpen, Users, Briefcase, Lightbulb
 } from 'lucide-react';
 
 export const personalData = {
