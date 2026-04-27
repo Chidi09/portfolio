@@ -37,7 +37,7 @@ const ProjectCard = ({ project }) => {
   const getProjectImage = (project) => {
     if (project.projectUrl && project.projectUrl !== "") {
       const encodedUrl = encodeURIComponent(project.projectUrl);
-      return `https://api.microlink.io/?url=${encodedUrl}&screenshot=true&meta=false&embed=screenshot.url&waitFor=3000&viewport.width=1280&viewport.height=800`;
+      return `https://api.microlink.io/?url=${encodedUrl}&screenshot=true&meta=false&embed=screenshot.url&waitFor=6000&viewport.width=1280&viewport.height=800`;
     }
     return project.fallbackImage;
   };
