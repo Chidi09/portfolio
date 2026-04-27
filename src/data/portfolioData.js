@@ -64,6 +64,24 @@ export const getSkillIcon = (skillName, className) => {
 
 export const projects = [
   {
+    title: "Dpee Network",
+    tech: ['React', 'Vite', 'Tailwind'],
+    description: "A digital hub for a youth empowerment NGO, focusing on drug prevention education, skills training, and community-driven rehabilitation programs.",
+    fallbackImage: "https://placehold.co/1280x800/1e40af/ffffff?text=Dpee+Network&font=roboto",
+    projectUrl: "https://www.dpeenetwork.com/",
+    githubUrl: "",
+    category: "Community"
+  },
+  {
+    title: "2-Gees",
+    tech: ['React', 'Vite', 'Tailwind'],
+    description: "A modern, high-conversion business landing page featuring responsive design and optimized user flows for service-based businesses.",
+    fallbackImage: "https://placehold.co/1280x800/dc2626/ffffff?text=2-Gees&font=roboto",
+    projectUrl: "https://2-gees-website.vercel.app/",
+    githubUrl: "",
+    category: "Business"
+  },
+  {
     title: "Anna Digital Academy",
     tech: ['Next.js', 'React', 'Tailwind'],
     description: "A specialized incubator platform for African founders, providing practical business education from validation to market launch.",
@@ -73,13 +91,13 @@ export const projects = [
     category: "Education"
   },
   {
-    title: "Heaven 11 Rewrite",
+    title: "Heaven 11 AI Strategy",
     tech: ['Next.js', 'React', 'Tailwind'],
-    description: "A high-performance rewrite of the Heaven 11 platform, leveraging Next.js for optimized rendering, speed, and modern user experience.",
-    fallbackImage: "https://placehold.co/1280x800/0f172a/ffffff?text=Heaven+11&font=roboto",
+    description: "A strategic AI consultancy platform helping faith-based organizations navigate responsible AI adoption and digital transformation.",
+    fallbackImage: "https://placehold.co/1280x800/0f172a/ffffff?text=Heaven+11+AI&font=roboto",
     projectUrl: "https://heaven-11-nextjs-rewrite.vercel.app/",
     githubUrl: "",
-    category: "Real Estate"
+    category: "Consultancy"
   },
   {
     title: "SafeMeet",
@@ -197,6 +215,10 @@ export const getCategoryIcon = (category) => {
     case 'Real Estate': return <Building className="w-3 h-3" />;
     case 'E-Commerce': return <ShoppingCart className="w-3 h-3" />;
     case 'Web3': return <Key className="w-3 h-3" />;
+    case 'Education': return <BookOpen className="w-3 h-3" />;
+    case 'Community': return <Users className="w-3 h-3" />;
+    case 'Business': return <Briefcase className="w-3 h-3" />;
+    case 'Consultancy': return <Lightbulb className="w-3 h-3" />;
     default: return <Globe className="w-3 h-3" />;
   }
 };
