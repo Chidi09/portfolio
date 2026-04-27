@@ -48,7 +48,7 @@ const ProjectCard = ({ project }) => {
 
       <div className="p-6 flex flex-col flex-grow">
         <div className="flex justify-between items-start mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-indigo-500 transition-colors">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-500 transition-colors">
             {project.title}
           </h3>
           <div className="flex gap-2">

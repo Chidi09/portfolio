@@ -6,7 +6,7 @@ const Hero = ({ personalData, scrollToSection }) => {
   return (
     <section id="hero" className="relative pt-32 pb-20 px-6 min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto text-center z-10">
-        <div className="inline-block mb-6 p-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-blob">
+        <div className="inline-block mb-6 p-1 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 animate-blob">
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white dark:border-black bg-gray-200">
             <img src={profilePic} alt="Profile" className="w-full h-full object-cover" />
           </div>
@@ -14,7 +14,7 @@ const Hero = ({ personalData, scrollToSection }) => {
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6 leading-tight">
           I Engineer <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Digital Ecosystems</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-600">Digital Ecosystems</span>
         </h1>
 
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">

@@ -3,16 +3,16 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Contact = ({ personalData, scrollToSection }) => {
   return (
-    <section id="contact" className="py-24 px-6 bg-indigo-600 text-white relative overflow-hidden">
+    <section id="contact" className="py-24 px-6 bg-emerald-600 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
       <div className="container mx-auto max-w-3xl text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Have an idea?</h2>
-        <p className="text-indigo-100 text-lg mb-10 max-w-xl mx-auto">
+        <p className="text-emerald-100 text-lg mb-10 max-w-xl mx-auto">
           I am currently open to new opportunities and collaborations. Let's build something extraordinary together.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <a href={`mailto:${personalData.email}`} className="px-8 py-4 bg-white text-indigo-600 rounded-full font-bold hover:shadow-xl transition-transform hover:-translate-y-1">
+          <a href={`mailto:${personalData.email}`} className="px-8 py-4 bg-white text-emerald-600 rounded-full font-bold hover:shadow-xl transition-transform hover:-translate-y-1">
             Send an Email
           </a>
           <div className="flex gap-6">
@@ -21,7 +21,7 @@ const Contact = ({ personalData, scrollToSection }) => {
               { icon: Linkedin, link: personalData.linkedin },
               { icon: Twitter, link: personalData.twitter }
             ].map((social, i) => (
-              <a key={i} href={social.link} target="_blank" rel="noopener noreferrer" className="p-3 bg-indigo-500 rounded-full hover:bg-indigo-400 transition-colors">
+              <a key={i} href={social.link} target="_blank" rel="noopener noreferrer" className="p-3 bg-emerald-500 rounded-full hover:bg-emerald-400 transition-colors">
                 <social.icon className="w-6 h-6 text-white" />
               </a>
             ))}

@@ -6,7 +6,7 @@ const Header = ({ darkMode, setDarkMode, isMobileMenuOpen, setIsMobileMenuOpen, 
     <header className="fixed w-full top-0 z-50 transition-all duration-300 border-b border-transparent bg-white/70 dark:bg-[#050505]/70 backdrop-blur-md">
       <div className="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         <button onClick={() => scrollToSection('hero')} className="text-xl font-bold tracking-tighter flex items-center gap-2 text-gray-900 dark:text-white group">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">Chidi</span>.jsx
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">Chidi</span>.jsx
         </button>
 
         {/* Desktop Nav */}
@@ -16,7 +16,7 @@ const Header = ({ darkMode, setDarkMode, isMobileMenuOpen, setIsMobileMenuOpen, 
               <li key={item}>
                 <button
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-sm font-medium transition-colors hover:text-indigo-500 ${activeSection === item.toLowerCase() ? 'text-indigo-500' : 'text-gray-600 dark:text-gray-400'}`}
+                  className={`text-sm font-medium transition-colors hover:text-emerald-500 ${activeSection === item.toLowerCase() ? 'text-emerald-500' : 'text-gray-600 dark:text-gray-400'}`}
                 >
                   {item}
                 </button>
@@ -32,7 +32,7 @@ const Header = ({ darkMode, setDarkMode, isMobileMenuOpen, setIsMobileMenuOpen, 
           </button>
           <button
             onClick={() => scrollToSection('contact')}
-            className="px-5 py-2 text-sm font-medium text-white bg-indigo-600 rounded-full hover:bg-indigo-700 transition-all shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_25px_rgba(79,70,229,0.5)]"
+            className="px-5 py-2 text-sm font-medium text-white bg-emerald-600 rounded-full hover:bg-emerald-700 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]"
           >
             Hire Me
           </button>
@@ -56,7 +56,7 @@ const Header = ({ darkMode, setDarkMode, isMobileMenuOpen, setIsMobileMenuOpen, 
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
-              className="w-full py-3 text-center text-gray-600 dark:text-gray-300 hover:text-indigo-500 font-medium"
+              className="w-full py-3 text-center text-gray-600 dark:text-gray-300 hover:text-emerald-500 font-medium"
             >
               {item}
             </button>
