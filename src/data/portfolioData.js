@@ -2,7 +2,8 @@ import React from 'react';
 import { 
   SiReact, SiNextdotjs, SiAngular, SiTailwindcss, SiFastapi, 
   SiNodedotjs, SiGo, SiPython, SiFirebase, SiMongodb, 
-  SiPostgresql, SiSupabase, SiGit, SiGithub, SiGooglegemini
+  SiPostgresql, SiSupabase, SiGit, SiGithub, SiGooglegemini,
+  SiFlutter, SiSpringboot, SiFastify
 } from 'react-icons/si';
 import { 
   TrendingUp, Building, ShoppingCart, Globe, Key, Palette, Sparkles
@@ -72,6 +73,33 @@ export const projects = [
     category: "FinTech"
   },
   {
+    title: "SolexPay",
+    tech: ['Analog.js', 'Flutter', 'Spring Boot'],
+    description: "A specialized digital wallet designed for Nigerian students to manage campus finances seamlessly, offering peer-to-peer transfers and bill payments.",
+    fallbackImage: "https://placehold.co/1280x800/059669/ffffff?text=SolexPay&font=roboto",
+    projectUrl: "https://solexpay.com.ng",
+    githubUrl: "",
+    category: "FinTech"
+  },
+  {
+    title: "Gazillion CRI",
+    tech: ['Next.js', 'FastAPI', 'Tailwind'],
+    description: "A Communication Research Intelligence platform helping organizations eliminate communication breakdowns through real-time data insights.",
+    fallbackImage: "https://placehold.co/1280x800/0f172a/ffffff?text=Gazillion+CRI&font=roboto",
+    projectUrl: "https://gazillioncri.com",
+    githubUrl: "",
+    category: "AI Tool"
+  },
+  {
+    title: "Naijas Pride",
+    tech: ['Angular', 'Fastify', 'Tailwind'],
+    description: "A vibrant cultural platform celebrating Nigerian heritage, built with a high-performance Angular frontend and a robust Fastify backend.",
+    fallbackImage: "https://placehold.co/1280x800/166534/ffffff?text=Naijas+Pride&font=roboto",
+    projectUrl: "https://naijaspride.com",
+    githubUrl: "",
+    category: "Community"
+  },
+  {
     title: "VarianTrade",
     tech: ['Angular', 'Python', 'Go', 'PostgreSQL'],
     description: "A comprehensive AI-Powered Trading & Betting Platform with real-time arbitrage detection, built solo.",
@@ -115,15 +143,6 @@ export const projects = [
     projectUrl: "https://www.cliftonvillefarms.com",
     githubUrl: "",
     category: "Agriculture"
-  },
-  {
-    title: "FluxPay",
-    tech: ['React', 'Node.js', 'MongoDB'],
-    description: "Automated crypto payment gateway supporting USDT, Solana, BTC, and ETH, solo-developed.",
-    fallbackImage: "https://placehold.co/1280x800/e2e8f0/4a5568?text=FluxPay+Crypto",
-    projectUrl: "",
-    githubUrl: "https://github.com/Chidi09/fluxpay-repo-link-if-any",
-    category: "Web3"
   },
   {
     title: "Smart Theming Engine",
