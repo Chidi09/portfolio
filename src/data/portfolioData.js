@@ -1,12 +1,12 @@
 import React from 'react';
 import { 
-  Atom, Server, Terminal, GitBranch, Database, Cpu, FileText, Cloud, Palette,
-  TrendingUp, Building, ShoppingCart, Globe, Key
+  SiReact, SiNextdotjs, SiAngular, SiTailwindcss, SiFastapi, 
+  SiNodedotjs, SiGo, SiPython, SiFirebase, SiMongodb, 
+  SiPostgresql, SiSupabase, SiGit, SiGithub, SiGooglegemini
+} from 'react-icons/si';
+import { 
+  TrendingUp, Building, ShoppingCart, Globe, Key, Palette, Sparkles
 } from 'lucide-react';
-
-const CodeIcon = ({ className }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-);
 
 export const personalData = {
   name: "Nneji Chidi Ben",
@@ -42,18 +42,22 @@ export const skills = [
 
 export const getSkillIcon = (skillName, className) => {
   switch (skillName) {
-    case 'React.js': case 'Next.js': return <Atom className={className} />;
-    case 'Angular': return <CodeIcon className={className} />;
-    case 'Tailwind CSS': return <Palette className={className} />;
-    case 'FastAPI': case 'Python': return <Server className={className} />;
-    case 'Node.js': return <Server className={className} />;
-    case 'Golang': return <Terminal className={className} />;
-    case 'Firebase': case 'Supabase': return <Cloud className={className} />;
-    case 'MongoDB': case 'PostgreSQL': return <Database className={className} />;
-    case 'Gemini API': return <Cpu className={className} />;
-    case 'Prompt Engineering': return <FileText className={className} />;
-    case 'Git/GitHub': return <GitBranch className={className} />;
-    default: return <CodeIcon className={className} />;
+    case 'React.js': return <SiReact className={className} />;
+    case 'Next.js': return <SiNextdotjs className={className} />;
+    case 'Angular': return <SiAngular className={className} />;
+    case 'Tailwind CSS': return <SiTailwindcss className={className} />;
+    case 'FastAPI': return <SiFastapi className={className} />;
+    case 'Node.js': return <SiNodedotjs className={className} />;
+    case 'Golang': return <SiGo className={className} />;
+    case 'Python': return <SiPython className={className} />;
+    case 'Firebase': return <SiFirebase className={className} />;
+    case 'MongoDB': return <SiMongodb className={className} />;
+    case 'PostgreSQL': return <SiPostgresql className={className} />;
+    case 'Supabase': return <SiSupabase className={className} />;
+    case 'Gemini API': return <SiGooglegemini className={className} />;
+    case 'Git/GitHub': return <SiGithub className={className} />;
+    case 'Smart Theming': return <Palette className={className} />;
+    default: return <Sparkles className={className} />;
   }
 };
 
