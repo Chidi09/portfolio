@@ -1,6 +1,32 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { getCategoryIcon } from '../data/portfolioData';
+import { 
+  SiReact, SiNextdotjs, SiAngular, SiTailwindcss, SiFastapi, 
+  SiNodedotjs, SiGo, SiPython, SiFirebase, SiMongodb, 
+  SiPostgresql, SiSupabase, SiVite, SiFramer
+} from 'react-icons/si';
+
+const getTechIcon = (techName) => {
+  const iconClass = "w-3 h-3";
+  switch (techName.toLowerCase()) {
+    case 'react': return <SiReact className={iconClass} />;
+    case 'next.js': return <SiNextdotjs className={iconClass} />;
+    case 'angular': return <SiAngular className={iconClass} />;
+    case 'tailwind': return <SiTailwindcss className={iconClass} />;
+    case 'fastapi': return <SiFastapi className={iconClass} />;
+    case 'node.js': return <SiNodedotjs className={iconClass} />;
+    case 'go': return <SiGo className={iconClass} />;
+    case 'python': return <SiPython className={iconClass} />;
+    case 'firebase': return <SiFirebase className={iconClass} />;
+    case 'mongodb': return <SiMongodb className={iconClass} />;
+    case 'postgresql': return <SiPostgresql className={iconClass} />;
+    case 'supabase': return <SiSupabase className={iconClass} />;
+    case 'vite': return <SiVite className={iconClass} />;
+    case 'framer motion': return <SiFramer className={iconClass} />;
+    default: return null;
+  }
+};
 
 const ProjectCard = ({ project }) => {
   const getProjectImage = (project) => {
@@ -66,7 +92,8 @@ const ProjectCard = ({ project }) => {
 
         <div className="mt-auto flex flex-wrap gap-2">
           {project.tech.map((t) => (
-            <span key={t} className="px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+            <span key={t} className="px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 flex items-center gap-1.5">
+              {getTechIcon(t)}
               {t}
             </span>
           ))}

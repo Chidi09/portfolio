@@ -1,5 +1,8 @@
 import React from 'react';
-import { ArrowRight, Atom, Server, Terminal, Database, Cloud } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { 
+  SiReact, SiNodedotjs, SiGo, SiPostgresql, SiGooglegemini 
+} from 'react-icons/si';
 import profilePic from '../59f8ca04-460f-4995-bd3d-96ab2b52648a.jpeg';
 
 const Hero = ({ personalData, scrollToSection }) => {
@@ -39,11 +42,11 @@ const Hero = ({ personalData, scrollToSection }) => {
         <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">Powering Applications With</p>
           <div className="flex flex-wrap justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            <Atom className="w-8 h-8 hover:text-blue-400" />
-            <Server className="w-8 h-8 hover:text-green-500" />
-            <Terminal className="w-8 h-8 hover:text-cyan-400" />
-            <Database className="w-8 h-8 hover:text-green-600" />
-            <Cloud className="w-8 h-8 hover:text-yellow-500" />
+            <SiReact className="w-8 h-8 hover:text-[#61DAFB]" title="React" />
+            <SiNodedotjs className="w-8 h-8 hover:text-[#339933]" title="Node.js" />
+            <SiGo className="w-8 h-8 hover:text-[#00ADD8]" title="Golang" />
+            <SiPostgresql className="w-8 h-8 hover:text-[#4169E1]" title="PostgreSQL" />
+            <SiGooglegemini className="w-8 h-8 hover:text-[#8E75C2]" title="Gemini AI" />
           </div>
         </div>
       </div>
