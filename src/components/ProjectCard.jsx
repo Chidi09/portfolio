@@ -4,7 +4,7 @@ import { getCategoryIcon } from '../data/portfolioData';
 import { 
   SiReact, SiNextdotjs, SiAngular, SiTailwindcss, SiFastapi, 
   SiNodedotjs, SiGo, SiPython, SiFirebase, SiMongodb, 
-  SiPostgresql, SiSupabase, SiVite, SiFramer, SiFlutter, SiSpringboot, SiFastify
+  SiPostgresql, SiSupabase, SiVite, SiFramer, SiFlutter, SiSpringboot, SiFastify, SiBase, SiFlow
 } from 'react-icons/si';
 
 const getTechIcon = (techName) => {
@@ -27,6 +27,8 @@ const getTechIcon = (techName) => {
     case 'flutter': return <SiFlutter className={iconClass} />;
     case 'springboot': case 'spring boot': return <SiSpringboot className={iconClass} />;
     case 'fastify': return <SiFastify className={iconClass} />;
+    case 'base': return <SiBase className={iconClass} />;
+    case 'flow': return <SiFlow className={iconClass} />;
     default: return null;
   }
 };

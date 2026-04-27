@@ -64,6 +64,15 @@ export const getSkillIcon = (skillName, className) => {
 
 export const projects = [
   {
+    title: "SafeMeet",
+    tech: ['Next.js', 'Fastify', 'Base', 'Flow'],
+    description: "A non-custodial escrow protocol facilitating trustless P2P trades and commitment pacts via decentralized smart contracts and QR handshakes.",
+    fallbackImage: "https://placehold.co/1280x800/0052FF/ffffff?text=SafeMeet&font=roboto",
+    projectUrl: "https://app.safe-meet.click",
+    githubUrl: "",
+    category: "Web3"
+  },
+  {
     title: "Finnitrex (UK)",
     tech: ['Next.js', 'React', 'Tailwind'],
     description: "As the Lead Developer, I built this UK tech solutions platform solo using Next.js. Optimized for speed, SEO, and scalability.",
