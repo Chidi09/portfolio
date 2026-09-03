@@ -152,13 +152,17 @@ const ProjectArchive = () => {
                           href={p.projectUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-neutral-900 dark:text-white hover:opacity-60 transition-opacity"
+                          aria-label={`Open live deployment for ${p.title}`}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono text-neutral-900 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-300 dark:border-neutral-700/80 rounded-md hover:border-neutral-500 dark:hover:border-neutral-500 transition-colors group/link"
                         >
-                          <span>Live</span>
-                          <ArrowUpRight className="w-3.5 h-3.5" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                          <span>Preview</span>
+                          <ArrowUpRight className="w-3 h-3 text-neutral-400 group-hover/link:text-neutral-950 dark:group-hover/link:text-white shrink-0" />
                         </a>
                       ) : (
-                        <span className="text-neutral-400 text-[11px]">Private</span>
+                        <span className="text-neutral-400 dark:text-neutral-500 text-[11px] italic font-mono px-2 py-0.5">
+                          No preview
+                        </span>
                       )}
                     </div>
                   </td>

@@ -9,8 +9,8 @@ export const personalData = {
   bioDescription:
     "Lead Software Engineer specializing in systems programming, high-throughput backend architecture, distributed protocols, and developer infrastructure. Author of Djangors (the Django of Rust) and Spryteo (local-first SVG engine). Currently leading engineering at Finnitrex (UK).",
   aboutDetailed:
-    "I am a software engineer focused on systems architecture, compiler and framework design, and interface craftsmanship. Over the past four years, I have engineered batteries-included web frameworks in Rust (Djangors), local-first vectorization engines with WebAssembly and MCP agent protocols (Spryteo), non-custodial decentralized escrow protocols (SafeMeet), and enterprise multi-tenant platforms (School OS, Finnitrex UK). My philosophy is grounded in simplicity: performant code, zero runtime surprises, and software that feels effortless to use.",
-  email: "chidinneji09@gmail.com",
+    "I am a software engineer focused on systems architecture, compiler and framework design, and interface craftsmanship. Over the past four years, I have engineered batteries-included web frameworks in Rust (Djangors), local-first vectorization engines with WebAssembly and MCP agent protocols (Spryteo), opinionated mobile platforms for Dart & Flutter (Bloom), non-custodial decentralized escrow protocols (SafeMeet), and enterprise web infrastructures (Finnitrex UK). My philosophy is grounded in simplicity: performant code, zero runtime surprises, and software that feels effortless to use.",
+  email: "chidiisking7@gmail.com",
   github: "https://github.com/Chidi09",
   linkedin: "https://linkedin.com/in/chidi-ben",
   whatsapp: "https://wa.me/+2347019008948",
@@ -38,8 +38,8 @@ export const personalData = {
       location: "Lagos, Nigeria",
       period: "2022 — Present",
       description:
-        "Designed and released Djangors (32-crate batteries-included Rust web framework), Spryteo (Rust/WASM SVG engine & MCP agent server), Varian language runtime, and production fintech & educational platforms.",
-      stack: ["Rust", "Golang", "WASM", "Tokio", "FastAPI", "React", "Analog.js", "PostgreSQL"]
+        "Designed and released Djangors (32-crate batteries-included Rust web framework), Spryteo (Rust/WASM SVG engine & MCP agent server), Bloom Platform (Dart & Flutter app platform), Varian language runtime, and production fintech platforms.",
+      stack: ["Rust", "Golang", "Dart", "Flutter", "WASM", "Tokio", "FastAPI", "React", "PostgreSQL"]
     }
   ],
   education: {
@@ -60,7 +60,7 @@ export const technicalCompetencies = [
   {
     domain: "Frontend & UI Engineering",
     summary: "Precision interfaces, responsive typography, cross-platform mobile architectures, and fluid interactions.",
-    skills: ["TypeScript", "React", "Next.js", "Flutter", "Dart", "Angular", "Analog.js", "Tailwind CSS", "WASM"]
+    skills: ["TypeScript", "React", "Next.js", "Flutter", "Dart", "Nuxt.js", "Vue.js", "Angular", "Analog.js", "Tailwind CSS", "WASM"]
   },
   {
     domain: "Data & Storage",
@@ -133,23 +133,23 @@ export const flagshipProjects = [
     badge: "Production Client"
   },
   {
-    id: "schoolos",
+    id: "bloom",
     index: "04",
-    title: "School OS",
-    category: "EdTech & Enterprise OS",
+    title: "Bloom Platform",
+    category: "Mobile & Frameworks",
     year: "2024",
-    tagline: "Comprehensive intelligent operating system for schools and universities.",
+    tagline: "The opinionated application platform for Dart & Flutter.",
     description:
-      "Multi-tenant institutional operating platform engineered for the Nigerian academic structure. Integrates automated 5-point GPA/CGPA computations, financial fee ledgers with Paystack & offline bank reconciliations, Moodle LMS roster syncing, and automated report card generation.",
+      "Architected an end-to-end full-stack platform for Dart and Flutter. Integrates the bloom_cli code generator, Signals reactive state management, GoRouter navigation, Bloom Server (Dart backend & relational ORM), Shorebird over-the-air (OTA) updates, and a modular UI design system.",
     architecture: [
-      "Analog.js / Angular SSR frontend with role-based portals for admins, lecturers, and students",
-      "Paystack gateway integration with double-entry fee ledger and clearance slip issuance",
-      "Bidirectional LMS synchronization with dedicated Moodle tenant instances"
+      "Full CLI toolchain (bloom_cli) generating signals state, router trees, and typesafe RPCs",
+      "Bloom Server lightweight relational ORM running natively on Dart runtime",
+      "Instant hot-patching pipeline via Shorebird OTA and production UI block library"
     ],
-    tech: ["Analog.js", "Angular", "TypeScript", "Tailwind CSS", "Paystack", "Moodle"],
-    projectUrl: "https://schoolos-peach.vercel.app/",
+    tech: ["Dart", "Flutter", "bloom_cli", "Signals", "Shorebird OTA", "ORM"],
+    projectUrl: "https://bloom-platform-ten.vercel.app/",
     githubUrl: "",
-    badge: "Enterprise Platform"
+    badge: "App Platform · Flutter"
   },
   {
     id: "safemeet",
@@ -250,6 +250,26 @@ export const allProjects = [
     tech: ["Next.js", "React", "Tailwind CSS", "App Router"],
     description: "Production food ordering & delivery platform with real-time tracking operating across Lagos and Ota.",
     projectUrl: "https://jollofnaija.com/",
+    githubUrl: ""
+  },
+  {
+    title: "GoGo Super-App",
+    category: "FinTech & Civic",
+    year: "2024",
+    role: "Lead Systems Architect",
+    tech: ["Next.js", "React", "Paystack", "KYC/BVN", "PostgreSQL", "Tailwind CSS"],
+    description: "The all-Nigeria super-app connecting agricultural trade, digital wallets, KYC onboarding, and civic data across 774 LGAs.",
+    projectUrl: "https://gogoapp.com.ng/",
+    githubUrl: ""
+  },
+  {
+    title: "Market Circle",
+    category: "Marketplace & Commerce",
+    year: "2023",
+    role: "Frontend Engineer",
+    tech: ["Nuxt.js", "Vue.js", "Tailwind CSS", "Stripe", "Laravel API"],
+    description: "Multi-sided commercial marketplace connecting buyers, sellers, and leaders, built with Nuxt.js, Stripe payments, and a Laravel API.",
+    projectUrl: "",
     githubUrl: ""
   },
   {
