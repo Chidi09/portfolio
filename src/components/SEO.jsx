@@ -28,6 +28,64 @@ const SEO = ({ title, description, keywords, image, url }) => {
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDescription} />
       <meta name="twitter:image" content={siteImage} />
+
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": `${siteUrl}#person`,
+              "name": "Nneji Chidi Ben",
+              "alternateName": "Chidi Ben",
+              "jobTitle": "Lead Software Engineer",
+              "email": "mailto:chidiisking7@gmail.com",
+              "url": siteUrl,
+              "image": siteImage,
+              "sameAs": [
+                "https://github.com/Chidi09",
+                "https://linkedin.com/in/chidi-ben",
+                "https://twitter.com/Benimaru177",
+                "https://wa.me/2347019008948"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Lagos",
+                "addressCountry": "NG"
+              },
+              "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Crawford University"
+              },
+              "knowsAbout": [
+                "Rust",
+                "Tokio",
+                "Hyper",
+                "Golang",
+                "Next.js",
+                "TypeScript",
+                "Dart",
+                "Flutter",
+                "Systems Architecture",
+                "Compilers",
+                "WebAssembly",
+                "Docker"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${siteUrl}#website`,
+              "url": siteUrl,
+              "name": "Nneji Chidi Ben — Portfolio & Engineering Practice",
+              "description": siteDescription,
+              "publisher": {
+                "@id": `${siteUrl}#person`
+              }
+            }
+          ]
+        })}
+      </script>
     </Helmet>
   );
 };

@@ -83,7 +83,7 @@ export const flagshipProjects = [
     year: "2024",
     tagline: "The batteries-included Django-inspired web framework for Rust.",
     description:
-      "Engineered a full-featured, modular web framework for Rust comprising 32 published crates. Bridges Django's developer velocity (ORM, auto-generated admin, migrations, forms, auth, and Paystack payments) with Rust's memory safety, sub-millisecond execution, and single-binary deploys.",
+      "Engineered a full-featured, modular web framework for Rust comprising 32 published crates. Bridges Django developer velocity (ORM, auto-generated admin, migrations, forms, auth, and Paystack payments) with Rust memory safety, sub-millisecond execution, and single-binary deploys.",
     architecture: [
       "Workspace of 32 modular crates on crates.io built on Tokio and Hyper async runtimes",
       "Compile-time verified ORM query builder preventing runtime schema drift",
@@ -93,8 +93,7 @@ export const flagshipProjects = [
     projectUrl: "https://djangors.vercel.app/",
     githubUrl: "https://github.com/Chidi09/djangors",
     previewImage: "/previews/djangors.png",
-    badge: "Framework · 32 Crates",
-    previewImage: "/previews/djangors.png"
+    badge: "Framework · 32 Crates"
   },
   {
     id: "spryteo",
@@ -114,8 +113,7 @@ export const flagshipProjects = [
     projectUrl: "https://spryteo.vercel.app",
     githubUrl: "https://github.com/chidi09/spryteo",
     previewImage: "/previews/spryteo.png",
-    badge: "Open Source · v1.0",
-    previewImage: "/previews/spryteo.png"
+    badge: "Open Source · v1.0"
   },
   {
     id: "finnitrex",
@@ -125,7 +123,7 @@ export const flagshipProjects = [
     year: "2024",
     tagline: "Solo-architected web platform and digital systems for a UK tech consultancy.",
     description:
-      "As the Lead Developer, I took complete ownership of Finnitrex's digital presence from wireframe to production. Engineered a high-performance Next.js architecture with instant route transitions, dynamic service cataloging, and top-tier Core Web Vitals.",
+      "As the Lead Developer, I took complete ownership of Finnitrex digital presence from wireframe to production. Engineered a high-performance Next.js architecture with instant route transitions, dynamic service cataloging, and top-tier Core Web Vitals.",
     architecture: [
       "Modular Next.js App Router for dynamic localization and lightning-fast edge rendering",
       "Tailwind design system tuned for corporate elegance and typography hierarchy",
@@ -134,8 +132,8 @@ export const flagshipProjects = [
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     projectUrl: "https://www.finnitrex.com",
     githubUrl: "",
-    badge: "Production Client",
-    previewImage: "/previews/finnitrex.png"
+    previewImage: "/previews/finnitrex.png",
+    badge: "Production Client"
   },
   {
     id: "bloom",
@@ -155,32 +153,71 @@ export const flagshipProjects = [
     projectUrl: "https://bloom-platform-ten.vercel.app/",
     githubUrl: "",
     previewImage: "/previews/bloom.png",
-    badge: "App Platform · Flutter",
-    previewImage: "/previews/bloom.png"
+    badge: "App Platform · Flutter"
   },
   {
-    id: "safemeet",
+    id: "variantrade",
     index: "05",
-    title: "SafeMeet Protocol",
-    category: "Web3 & P2P Escrow",
-    year: "2024",
-    tagline: "Non-custodial escrow protocol facilitating trustless trades and commitment pacts.",
+    title: "VarianTrade Engine",
+    category: "FinTech & Systems",
+    year: "2023",
+    tagline: "Real-time market odds aggregation and sub-millisecond arbitrage engine.",
     description:
-      "Engineered a decentralized security layer for peer-to-peer exchanges. SafeMeet utilizes smart contract escrows on Base and Flow with QR-code cryptographic handshakes to eliminate counterparty risk without third-party custodians.",
+      "A high-concurrency calculation platform scanning market spreads and odds discrepancies in real time. Built with Go microservices consuming live persistent WebSocket feeds for mathematical spread analysis and sub-50ms automated alert dispatching.",
     architecture: [
-      "Decentralized smart contract state machine handling fund lock, dispute, and release",
-      "QR cryptographic handshake protocol for physical and digital verification",
-      "High-throughput Fastify backend indexing blockchain transactions and events"
+      "Concurrent Go worker pools consuming live odds data over persistent WebSockets",
+      "Python-driven mathematical model detecting cross-market spread anomalies",
+      "Angular frontend with real-time streaming charts and rapid order execution UI"
     ],
-    tech: ["Next.js", "Fastify", "Base", "Flow", "EVM"],
-    projectUrl: "https://app.safe-meet.click",
+    tech: ["Angular", "Golang", "Python", "PostgreSQL", "WebSockets"],
+    projectUrl: "https://variantrades.com",
     githubUrl: "",
-    badge: "Protocol",
-    previewImage: "/previews/safemeet.png"
+    previewImage: "/previews/variantrade.png",
+    badge: "High-Frequency FinTech"
+  },
+  {
+    id: "crush",
+    index: "06",
+    title: "Crush",
+    category: "Developer Tooling & Systems",
+    year: "2024",
+    tagline: "Lightweight Docker Desktop alternative for native Windows (No WSL2).",
+    description:
+      "A fast, lightweight Docker Desktop alternative designed for native Windows development without the memory overhead of virtualized WSL2 environments. Run docker-compose dependencies like Postgres & Redis with sub-second daemon initialization.",
+    architecture: [
+      "Native Windows container orchestration bypassing WSL2 virtual machine memory footprint",
+      "Instant sub-second daemon startup time with minimal idle RAM usage (<150MB)",
+      "Streamlined developer UI with realtime log streaming and container health telemetry"
+    ],
+    tech: ["Go/Rust", "Containers", "Docker Compose", "Tailwind CSS", "Systems"],
+    projectUrl: "https://crush-web-six.vercel.app/",
+    githubUrl: "https://github.com/Chidi09/crush",
+    previewImage: "/previews/crush.png",
+    badge: "Developer Tooling · v1.0"
+  },
+  {
+    id: "nigeriachina",
+    index: "07",
+    title: "Nigerian China Investment Club",
+    category: "Cross-Border Commerce",
+    year: "2023",
+    tagline: "Bilateral investment portal with trade listings and transaction pipelines.",
+    description:
+      "International business platform facilitating bilateral trade and strategic ventures between Nigerian founders and Chinese manufacturing hubs. Features opportunity pipelines, verified investor vetting, and bilingual inquiry management.",
+    architecture: [
+      "High-performance React frontend with editorial responsive typography and showcase galleries",
+      "Go microservices backend for investor vetting, enquiry routing, and audit logs",
+      "Supabase database integration with document vault for cross-border deal compliance"
+    ],
+    tech: ["React", "Golang", "Supabase", "Tailwind CSS", "REST API"],
+    projectUrl: "https://www.nigerianchinainvestmentclub.com",
+    githubUrl: "",
+    previewImage: "/previews/nigeriachina.png",
+    badge: "International Commerce"
   },
   {
     id: "varianlang",
-    index: "06",
+    index: "08",
     title: "Varian Language",
     category: "Compilers & Languages",
     year: "2024",
@@ -196,8 +233,7 @@ export const flagshipProjects = [
     projectUrl: "https://varian-lang.vercel.app/",
     githubUrl: "",
     previewImage: "/previews/varianlang.png",
-    badge: "Language Design",
-    previewImage: "/previews/varianlang.png"
+    badge: "Language Design"
   }
 ];
 
@@ -339,7 +375,8 @@ export const allProjects = [
     description: "Real-time sports and trading market arbitrage detection engine powered by Go microservices.",
     projectUrl: "https://variantrades.com",
     githubUrl: ""
-  },
+  ,
+    previewImage: "/previews/variantrade.png"},
   {
     title: "Gazillion CRI",
     category: "AI & Data",
@@ -369,7 +406,8 @@ export const allProjects = [
     description: "Cross-border investment portal with bilateral trade listings and escrow order tracking.",
     projectUrl: "https://www.nigerianchinainvestmentclub.com",
     githubUrl: ""
-  },
+  ,
+    previewImage: "/previews/nigeriachina.png"},
   {
     title: "Grandkonsul Gardens",
     category: "Real Estate",
