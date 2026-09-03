@@ -215,25 +215,25 @@ export const flagshipProjects = [
     previewImage: "/previews/nigeriachina.png",
     badge: "International Commerce"
   },
-  {
-    id: "varianlang",
+    {
+    id: "gazillioncri",
     index: "08",
-    title: "Varian Language",
-    category: "Compilers & Languages",
+    title: "Gazillion CRI",
+    category: "AI & Communication Intelligence",
     year: "2026",
-    tagline: "A fast, memory-safe language with native actors and full-stack runtime.",
+    tagline: "AI-powered communication recovery intelligence — This could have been an email.",
     description:
-      "An experimental language designed for full-stack unification. Features native actor-based concurrency, channels, an integrated batteries-included web framework (Zenith), server-driven UI framework (Lumen), and package management tooling.",
+      "Pivotal communication intelligence platform engineered to eliminate meeting overload and missed context across Slack and Microsoft Teams. Detects low-value meetings, intercepts unclear messages before they snowball, and delivers real-time financial savings dashboards ($2M+ annual potential).",
     architecture: [
-      "Actor-model runtime with message-passing channels for lock-free concurrency",
-      "Zenith web framework module compiling directly into optimized binary handlers",
-      "Interactive browser-based live execution playground and AST explorer"
+      "Real-time event stream ingestion across Slack, Microsoft Teams, and Jira APIs",
+      "Tri-criteria meeting scoring engine evaluating decisions, agendas, and attendee necessity",
+      "Executive savings telemetry and automated async decision recovery pipeline"
     ],
-    tech: ["Compilers", "Systems", "Actors", "Runtime", "TypeScript"],
-    projectUrl: "https://varian-lang.vercel.app/",
+    tech: ["Next.js", "React", "TypeScript", "Slack API", "MS Teams", "Jira", "Tailwind CSS"],
+    projectUrl: "https://gazillioncri.com",
     githubUrl: "",
-    previewImage: "/previews/varianlang.png",
-    badge: "Language Design"
+    previewImage: "/previews/gazillioncri.png",
+    badge: "AI Platform · Pivotal"
   }
 ];
 

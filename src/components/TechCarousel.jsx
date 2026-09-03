@@ -24,14 +24,13 @@ const PaystackIcon = ({ className }) => (
   </svg>
 );
 
-// Custom SVG for Bachs (Banking as a Service & Clearing Rails)
+// Real official icon from bachs.io
 const BachsIcon = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="5" width="20" height="14" rx="2" />
-    <line x1="2" y1="10" x2="22" y2="10" />
-    <circle cx="7" cy="15" r="1.2" fill="currentColor" />
-    <circle cx="12" cy="15" r="1.2" fill="currentColor" />
-  </svg>
+  <img
+    src="/bachs-icon.png"
+    alt="Bachs"
+    className="w-5 h-5 rounded object-contain border border-neutral-700/50 shadow-sm"
+  />
 );
 
 const techItems = [
