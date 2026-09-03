@@ -80,7 +80,7 @@ export const flagshipProjects = [
     index: "01",
     title: "Djangors",
     category: "Systems & Web Framework",
-    year: "2024",
+    year: "2026",
     tagline: "The batteries-included Django-inspired web framework for Rust.",
     description:
       "Engineered a full-featured, modular web framework for Rust comprising 32 published crates. Bridges Django developer velocity (ORM, auto-generated admin, migrations, forms, auth, and Paystack payments) with Rust memory safety, sub-millisecond execution, and single-binary deploys.",
@@ -100,7 +100,7 @@ export const flagshipProjects = [
     index: "02",
     title: "Spryteo",
     category: "Developer Tooling & WASM",
-    year: "2024",
+    year: "2026",
     tagline: "Local-first vectorization engine converting rasters into animateable SVGs.",
     description:
       "Designed a deterministic raster-to-SVG vectorizer engine. Rather than generating a single flattened blob, Spryteo generates semantic <g> group trees with stable blake3 content-hashed IDs. Ships as a standalone CLI, Node.js NAPI-rs library, in-browser WebAssembly runtime, and MCP server for AI agents.",
@@ -140,7 +140,7 @@ export const flagshipProjects = [
     index: "04",
     title: "Bloom Platform",
     category: "Mobile & Frameworks",
-    year: "2024",
+    year: "2026",
     tagline: "The opinionated application platform for Dart & Flutter.",
     description:
       "Architected an end-to-end full-stack platform for Dart and Flutter. Integrates the bloom_cli code generator, Signals reactive state management, GoRouter navigation, Bloom Server (Dart backend & relational ORM), Shorebird over-the-air (OTA) updates, and a modular UI design system.",
@@ -160,7 +160,7 @@ export const flagshipProjects = [
     index: "05",
     title: "VarianTrade Engine",
     category: "FinTech & Systems",
-    year: "2023",
+    year: "2025",
     tagline: "Real-time market odds aggregation and sub-millisecond arbitrage engine.",
     description:
       "A high-concurrency calculation platform scanning market spreads and odds discrepancies in real time. Built with Go microservices consuming live persistent WebSocket feeds for mathematical spread analysis and sub-50ms automated alert dispatching.",
@@ -180,7 +180,7 @@ export const flagshipProjects = [
     index: "06",
     title: "Crush",
     category: "Developer Tooling & Systems",
-    year: "2024",
+    year: "2026",
     tagline: "Lightweight Docker Desktop alternative for native Windows (No WSL2).",
     description:
       "A fast, lightweight Docker Desktop alternative designed for native Windows development without the memory overhead of virtualized WSL2 environments. Run docker-compose dependencies like Postgres & Redis with sub-second daemon initialization.",
@@ -200,7 +200,7 @@ export const flagshipProjects = [
     index: "07",
     title: "Nigerian China Investment Club",
     category: "Cross-Border Commerce",
-    year: "2023",
+    year: "2024",
     tagline: "Bilateral investment portal with trade listings and transaction pipelines.",
     description:
       "International business platform facilitating bilateral trade and strategic ventures between Nigerian founders and Chinese manufacturing hubs. Features opportunity pipelines, verified investor vetting, and bilingual inquiry management.",
@@ -220,7 +220,7 @@ export const flagshipProjects = [
     index: "08",
     title: "Varian Language",
     category: "Compilers & Languages",
-    year: "2024",
+    year: "2026",
     tagline: "A fast, memory-safe language with native actors and full-stack runtime.",
     description:
       "An experimental language designed for full-stack unification. Features native actor-based concurrency, channels, an integrated batteries-included web framework (Zenith), server-driven UI framework (Lumen), and package management tooling.",
@@ -274,7 +274,7 @@ export const allProjects = [
   {
     title: "School OS",
     category: "EdTech & OS",
-    year: "2024",
+    year: "2025",
     role: "Lead Architect",
     tech: ["Analog.js", "Angular", "TypeScript", "Paystack", "Moodle"],
     description: "Comprehensive school management platform: automated CGPA, fee ledger, Moodle LMS sync, and report cards.",
@@ -296,7 +296,7 @@ export const allProjects = [
   {
     title: "NaijaJollof",
     category: "Commerce",
-    year: "2024",
+    year: "2026",
     role: "Full-Stack Engineer",
     tech: ["Next.js", "React", "Tailwind CSS", "App Router"],
     description: "Production food ordering & delivery platform with real-time tracking operating across Lagos and Ota.",
@@ -307,7 +307,7 @@ export const allProjects = [
   {
     title: "GoGo Super-App",
     category: "FinTech & Civic",
-    year: "2024",
+    year: "2026",
     role: "Lead Systems Architect",
     tech: ["Next.js", "React", "Paystack", "KYC/BVN", "PostgreSQL", "Tailwind CSS"],
     description: "The all-Nigeria super-app connecting agricultural trade, digital wallets, KYC onboarding, and civic data across 774 LGAs.",
@@ -318,7 +318,7 @@ export const allProjects = [
   {
     title: "Market Circle",
     category: "Marketplace & Commerce",
-    year: "2023",
+    year: "2024",
     role: "Frontend Engineer",
     tech: ["Nuxt.js", "Vue.js", "Tailwind CSS", "Stripe", "Laravel API"],
     description: "Multi-sided commercial marketplace connecting buyers, sellers, and leaders, built with Nuxt.js, Stripe payments, and a Laravel API.",
@@ -328,7 +328,7 @@ export const allProjects = [
   {
     title: "Hebrews Eleven",
     category: "AI & Advisory",
-    year: "2024",
+    year: "2026",
     role: "Lead Web Engineer",
     tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     description: "UK AI governance consultancy platform featuring the proprietary CLARITY Framework™ diagnostic.",
@@ -369,7 +369,7 @@ export const allProjects = [
   {
     title: "VarianTrade",
     category: "FinTech",
-    year: "2023",
+    year: "2025",
     role: "Systems Engineer",
     tech: ["Angular", "Golang", "Python", "PostgreSQL"],
     description: "Real-time sports and trading market arbitrage detection engine powered by Go microservices.",
@@ -400,7 +400,7 @@ export const allProjects = [
   {
     title: "Nigerian China Invest",
     category: "Commerce",
-    year: "2023",
+    year: "2024",
     role: "Lead Developer",
     tech: ["React", "Golang", "Supabase"],
     description: "Cross-border investment portal with bilateral trade listings and escrow order tracking.",
