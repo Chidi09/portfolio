@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { personalData, projects, skills } from './data/portfolioData';
+import { personalData } from './data/portfolioData';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
+import ProjectArchive from './components/ProjectArchive';
 import About from './components/About';
+import GithubCalendarSection from './components/GithubCalendarSection';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SEO from './components/SEO';
 
 const App = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
-  // Dark mode initialization
+  // Dark mode initialization (default to true for high-contrast dark aesthetic, saved to localStorage)
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode !== null) return JSON.parse(savedMode);
@@ -33,36 +34,29 @@ const App = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
       setActiveSection(id);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#050505] font-inter text-gray-800 dark:text-gray-200 transition-colors duration-500 overflow-x-hidden selection:bg-emerald-500 selection:text-white">
+    <div className="min-h-screen bg-[#fafafa] dark:bg-[#09090b] font-sans text-neutral-900 dark:text-neutral-100 transition-colors duration-300 selection:bg-neutral-900 selection:text-white dark:selection:bg-white dark:selection:text-neutral-900">
       <SEO />
-
-      {/* --- GRID BACKGROUND EFFECT --- */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-emerald-500 opacity-20 blur-[100px] dark:opacity-20"></div>
-      </div>
 
       <Header 
         darkMode={darkMode} 
         setDarkMode={setDarkMode} 
-        isMobileMenuOpen={isMobileMenuOpen} 
-        setIsMobileMenuOpen={setIsMobileMenuOpen} 
         scrollToSection={scrollToSection}
         activeSection={activeSection}
       />
 
       <main>
         <Hero personalData={personalData} scrollToSection={scrollToSection} />
+        <Projects />
+        <ProjectArchive />
         <About personalData={personalData} />
-        <Skills skills={skills} />
-        <Projects projects={projects} />
-        <Contact personalData={personalData} scrollToSection={scrollToSection} />
+        <GithubCalendarSection darkMode={darkMode} />
+        <Skills />
+        <Contact personalData={personalData} />
       </main>
 
       <Footer personalData={personalData} />
@@ -71,3 +65,5 @@ const App = () => {
 };
 
 export default App;
+
+

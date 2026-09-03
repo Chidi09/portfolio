@@ -1,53 +1,72 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { 
-  SiReact, SiNodedotjs, SiGo, SiPostgresql, SiGooglegemini 
-} from 'react-icons/si';
-import profilePic from '../59f8ca04-460f-4995-bd3d-96ab2b52648a.jpeg';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 const Hero = ({ personalData, scrollToSection }) => {
   return (
-    <section id="hero" className="relative pt-32 pb-20 px-6 min-h-screen flex items-center justify-center">
-      <div className="max-w-4xl mx-auto text-center z-10">
-        <div className="inline-block mb-6 p-1 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 animate-blob">
-          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white dark:border-black bg-gray-200">
-            <img src={profilePic} alt="Profile" className="w-full h-full object-cover" />
+    <section id="hero" className="pt-36 pb-20 md:pt-44 md:pb-28 border-b border-neutral-200 dark:border-neutral-800 transition-colors">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Top Metadata Line */}
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-neutral-200/60 dark:border-neutral-800/60 font-mono text-[11px] uppercase tracking-widest text-neutral-500">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-neutral-900 dark:bg-neutral-100" />
+            <span>{personalData.status}</span>
+          </div>
+          <div className="flex items-center gap-6">
+            <span>{personalData.location}</span>
+            <span>{personalData.timezone}</span>
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6 leading-tight">
-          I Engineer <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-600">Digital Ecosystems</span>
-        </h1>
+        {/* Editorial Headline */}
+        <div className="pt-12 pb-8 max-w-4xl">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-neutral-950 dark:text-white leading-[1.08] mb-8">
+            Architecting <span className="font-serif italic font-normal">resilient</span> backends <br className="hidden sm:inline" />
+            & precision web systems.
+          </h1>
 
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-          {personalData.fullTagline}
-        </p>
+          <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 font-normal leading-relaxed max-w-2xl mb-12">
+            {personalData.bioDescription}
+          </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button
-            onClick={() => scrollToSection('projects')}
-            className="group px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-bold transition-all hover:scale-105 flex items-center justify-center gap-2"
-          >
-            View Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-full font-bold transition-all hover:bg-gray-100 dark:hover:bg-gray-800"
-          >
-            Contact Me
-          </button>
+          {/* Action Row */}
+          <div className="flex flex-wrap items-center gap-4">
+            <button
+              onClick={() => scrollToSection('flagships')}
+              className="group inline-flex items-center gap-2 px-6 py-3.5 bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 font-mono text-xs uppercase tracking-wider hover:opacity-90 transition-opacity"
+            >
+              <span>Selected Case Studies</span>
+              <ArrowDown className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
+            </button>
+
+            <a
+              href={`mailto:${personalData.email}`}
+              className="inline-flex items-center gap-2 px-6 py-3.5 border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white font-mono text-xs uppercase tracking-wider hover:border-neutral-950 dark:hover:border-white transition-colors"
+            >
+              <span>Initiate Inquiry</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+
+            <button
+              onClick={() => scrollToSection('archive')}
+              className="font-mono text-xs uppercase tracking-wider text-neutral-500 hover:text-neutral-950 dark:hover:text-white transition-colors px-3 py-3"
+            >
+              Explore Full Index →
+            </button>
+          </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">Powering Applications With</p>
-          <div className="flex flex-wrap justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            <SiReact className="w-8 h-8 hover:text-[#61DAFB]" title="React" />
-            <SiNodedotjs className="w-8 h-8 hover:text-[#339933]" title="Node.js" />
-            <SiGo className="w-8 h-8 hover:text-[#00ADD8]" title="Golang" />
-            <SiPostgresql className="w-8 h-8 hover:text-[#4169E1]" title="PostgreSQL" />
-            <SiGooglegemini className="w-8 h-8 hover:text-[#8E75C2]" title="Gemini AI" />
-          </div>
+        {/* Metric / Spec Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 mt-8 border-t border-neutral-200/60 dark:border-neutral-800/60 font-mono">
+          {personalData.metrics.map((m, idx) => (
+            <div key={idx} className="space-y-1">
+              <div className="text-2xl sm:text-3xl font-light text-neutral-950 dark:text-white">
+                {m.value}
+              </div>
+              <div className="text-[11px] uppercase tracking-wider text-neutral-500">
+                {m.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -55,3 +74,4 @@ const Hero = ({ personalData, scrollToSection }) => {
 };
 
 export default Hero;
+

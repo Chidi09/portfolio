@@ -1,66 +1,133 @@
-import React from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon, ArrowUpRight } from 'lucide-react';
 
-const Header = ({ darkMode, setDarkMode, isMobileMenuOpen, setIsMobileMenuOpen, scrollToSection, activeSection }) => {
+const Header = ({ darkMode, setDarkMode, scrollToSection, activeSection }) => {
+  const [time, setTime] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const updateTime = () => {
+      const options = {
+        timeZone: 'Africa/Lagos',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      };
+      setTime(new Intl.DateTimeFormat('en-GB', options).format(new Date()));
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const navItems = [
+    { id: 'flagships', label: 'Case Studies' },
+    { id: 'archive', label: 'Index' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'activity', label: 'Activity' },
+    { id: 'competencies', label: 'Stack' },
+    { id: 'contact', label: 'Contact' }
+  ];
+
   return (
-    <header className="fixed w-full top-0 z-50 transition-all duration-300 border-b border-transparent bg-white/70 dark:bg-[#050505]/70 backdrop-blur-md">
-      <div className="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
-        <button onClick={() => scrollToSection('hero')} className="text-xl font-bold tracking-tighter flex items-center gap-2 text-gray-900 dark:text-white group">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">Chidi</span>.ts
+    <header className="fixed w-full top-0 z-50 bg-[#fafafa]/80 dark:bg-[#09090b]/80 backdrop-blur-md border-b border-neutral-200/80 dark:border-neutral-800/80 transition-colors">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Identity */}
+        <button
+          onClick={() => scrollToSection('hero')}
+          className="flex items-center gap-3 group text-left"
+        >
+          <span className="font-serif text-xl tracking-tight text-neutral-900 dark:text-white group-hover:opacity-70 transition-opacity">
+            Chidi Ben
+          </span>
+          <span className="hidden sm:inline-block font-mono text-[11px] text-neutral-500 uppercase tracking-wider border-l border-neutral-300 dark:border-neutral-700 pl-3">
+            Lead SWE
+          </span>
         </button>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          <ul className="flex space-x-8">
-            {['Home', 'About', 'Education', 'Skills', 'Projects'].map((item) => (
-              <li key={item}>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-6">
+            {navItems.map((item) => (
+              <li key={item.id}>
                 <button
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-sm font-medium transition-colors hover:text-emerald-500 ${activeSection === item.toLowerCase() ? 'text-emerald-500' : 'text-gray-600 dark:text-gray-400'}`}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-xs font-mono uppercase tracking-wider transition-colors ${
+                    activeSection === item.id
+                      ? 'text-neutral-950 dark:text-white font-medium underline underline-offset-8 decoration-neutral-400'
+                      : 'text-neutral-500 hover:text-neutral-950 dark:hover:text-white'
+                  }`}
                 >
-                  {item}
+                  {item.label}
                 </button>
               </li>
             ))}
           </ul>
-          <div className="w-px h-4 bg-gray-300 dark:bg-gray-700"></div>
+        </nav>
+
+        {/* Right Details: Lagos Time + Theme Toggle + Connect + Mobile Menu Toggle */}
+        <div className="flex items-center gap-3">
+          {/* Lagos Real-Time Clock */}
+          <div className="hidden lg:flex items-center gap-2 font-mono text-[11px] text-neutral-500">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-neutral-100 animate-pulse" />
+            <span>LOS {time || '12:00:00'}</span>
+          </div>
+
+          <div className="h-4 w-px bg-neutral-200 dark:border-neutral-800 hidden lg:block" />
+
+          {/* Minimalist Theme Toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-400"
+            aria-label="Toggle theme"
+            className="w-8 h-8 flex items-center justify-center text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white transition-colors"
           >
-            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            {darkMode ? <Sun className="w-4 h-4 stroke-[1.5]" /> : <Moon className="w-4 h-4 stroke-[1.5]" />}
           </button>
+
+          {/* Quick CTA */}
           <button
             onClick={() => scrollToSection('contact')}
-            className="px-5 py-2 text-sm font-medium text-white bg-emerald-600 rounded-full hover:bg-emerald-700 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]"
+            className="hidden sm:inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 border border-neutral-900 dark:border-white text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-colors"
           >
-            Hire Me
+            Connect
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </button>
-        </div>
 
-        {/* Mobile Toggle */}
-        <div className="flex md:hidden items-center gap-4">
-          <button onClick={() => setDarkMode(!darkMode)} className="text-gray-600 dark:text-gray-400">
-            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-900 dark:text-white">
-            {isMobileMenuOpen ? <X /> : <Menu />}
+          {/* Mobile Menu Toggle Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+            className="md:hidden font-mono text-xs uppercase tracking-wider px-2 py-1 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200"
+          >
+            {isMobileMenuOpen ? 'Close' : 'Menu'}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 p-4 md:hidden flex flex-col items-center gap-4 shadow-xl">
-          {['Home', 'About', 'Projects', 'Contact'].map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item.toLowerCase())}
-              className="w-full py-3 text-center text-gray-600 dark:text-gray-300 hover:text-emerald-500 font-medium"
-            >
-              {item}
-            </button>
-          ))}
+        <div className="md:hidden border-b border-neutral-200 dark:border-neutral-800 bg-[#fafafa] dark:bg-[#09090b] px-6 py-6 font-mono text-xs space-y-4">
+          <div className="grid grid-cols-2 gap-3">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  scrollToSection(item.id);
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`text-left py-2 border-b border-neutral-100 dark:border-neutral-900 uppercase tracking-wider ${
+                  activeSection === item.id ? 'text-neutral-950 dark:text-white font-medium' : 'text-neutral-500'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+          <div className="pt-2 flex items-center justify-between text-[11px] text-neutral-400 border-t border-neutral-100 dark:border-neutral-900">
+            <span>LOS {time}</span>
+            <span>LAGOS · UTC+1</span>
+          </div>
         </div>
       )}
     </header>
@@ -68,3 +135,4 @@ const Header = ({ darkMode, setDarkMode, isMobileMenuOpen, setIsMobileMenuOpen, 
 };
 
 export default Header;
+

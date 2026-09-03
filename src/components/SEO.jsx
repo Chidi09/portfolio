@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, image, url }) => {
-  const siteTitle = title ? `${title} | Nneji Chidi Ben` : 'Nneji Chidi Ben | Software Engineer';
-  const siteDescription = description || "Portfolio of Nneji Chidi Ben - Software Engineer. Building high-performance digital ecosystems like VarianTrade & FluxPay.";
+  const siteTitle = title ? `${title} — Nneji Chidi Ben` : 'Nneji Chidi Ben — Lead Software Engineer';
+  const siteDescription = description || "Selected works and engineering practice of Nneji Chidi Ben. Lead Software Engineer specializing in high-throughput backend architecture, resilient web platforms, and precision interfaces.";
   const siteImage = image || "https://chidiportfolio.netlify.app/preview.jpg";
   const siteUrl = url || "https://chidiportfolio.netlify.app/";
 

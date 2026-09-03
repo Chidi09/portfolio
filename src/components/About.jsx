@@ -1,57 +1,95 @@
 import React from 'react';
-import { Award, GraduationCap } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const About = ({ personalData }) => {
   return (
-    <section id="about" className="py-24 px-6 bg-gray-50 dark:bg-[#080808]">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* About Text */}
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Engineering with Purpose</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              {personalData.aboutMe}
-            </p>
+    <section id="experience" className="py-24 md:py-32 border-b border-neutral-200 dark:border-neutral-800 transition-colors">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-neutral-200 dark:border-neutral-800">
+          <div>
+            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-3">
+              Section 04 // Track Record & Foundation
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-light text-neutral-950 dark:text-white tracking-tight">
+              Experience & <span className="font-serif italic font-normal">Practice</span>
+            </h2>
+          </div>
+          <p className="text-sm font-mono text-neutral-500 max-w-md">
+            Solo-architecting commercial platforms, decentralized protocols, and resilient infrastructure.
+          </p>
+        </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {personalData.certifications.map((cert, i) => (
-                <div key={i} className="p-4 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-start gap-3">
-                  <Award className="w-5 h-5 text-emerald-500 mt-1 flex-shrink-0" />
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{cert}</span>
+        {/* Two-Column Editorial Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          {/* Narrative Left Column */}
+          <div className="lg:col-span-5 space-y-6">
+            <h3 className="text-xl font-light text-neutral-950 dark:text-white">
+              Engineering philosophy grounded in rigor and simplicity.
+            </h3>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              {personalData.aboutDetailed}
+            </p>
+            <div className="pt-4 border-t border-neutral-200 dark:border-neutral-800">
+              <div className="font-mono text-xs text-neutral-500 uppercase tracking-wider mb-3">
+                Academic Background
+              </div>
+              <div className="border border-neutral-200 dark:border-neutral-800 p-4 bg-white dark:bg-neutral-950">
+                <div className="font-sans font-medium text-sm text-neutral-950 dark:text-white">
+                  {personalData.education.degree}
                 </div>
-              ))}
+                <div className="text-xs text-neutral-500 font-mono mt-1">
+                  {personalData.education.institution} · {personalData.education.years}
+                </div>
+                <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-2 font-sans">
+                  {personalData.education.focus}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Education Card */}
-          <div id="education" className="bg-white dark:bg-gray-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm relative overflow-hidden group">
-            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-colors"></div>
-
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg text-emerald-600 dark:text-emerald-400">
-                <GraduationCap className="w-8 h-8" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{personalData.education.degree}</h3>
-                <p className="text-gray-500 dark:text-gray-400">{personalData.education.university}</p>
-              </div>
+          {/* Timeline Right Column */}
+          <div className="lg:col-span-7 space-y-8">
+            <div className="font-mono text-xs text-neutral-500 uppercase tracking-wider mb-2">
+              Career Timeline
             </div>
 
-            <div className="space-y-4">
-              <div className="flex justify-between text-sm py-3 border-b border-gray-100 dark:border-gray-800">
-                <span className="text-gray-500">Duration</span>
-                <span className="font-medium dark:text-gray-200">{personalData.education.years}</span>
-              </div>
-              <div className="flex justify-between text-sm py-3 border-b border-gray-100 dark:border-gray-800">
-                <span className="text-gray-500">Location</span>
-                <span className="font-medium dark:text-gray-200">{personalData.education.location}</span>
-              </div>
-              <div className="pt-2">
-                <span className="text-sm text-gray-500 block mb-2">Focus Areas</span>
-                <p className="text-sm font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
-                  {personalData.education.coursework}
-                </p>
-              </div>
+            <div className="space-y-6">
+              {personalData.experience.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="border border-neutral-200 dark:border-neutral-800 p-6 sm:p-8 bg-white dark:bg-neutral-950 space-y-4"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 border-b border-neutral-100 dark:border-neutral-800/80 pb-4">
+                    <div>
+                      <h4 className="text-base font-medium text-neutral-950 dark:text-white font-sans">
+                        {item.role}
+                      </h4>
+                      <div className="text-xs font-mono text-neutral-500 mt-0.5">
+                        {item.company} · {item.location}
+                      </div>
+                    </div>
+                    <span className="font-mono text-xs text-neutral-400">
+                      {item.period}
+                    </span>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+                    {item.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {item.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="font-mono text-[10px] px-2 py-0.5 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-900"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -61,3 +99,4 @@ const About = ({ personalData }) => {
 };
 
 export default About;
+

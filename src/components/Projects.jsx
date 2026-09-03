@@ -1,20 +1,30 @@
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import FlagshipCard from './FlagshipCard';
+import { flagshipProjects } from '../data/portfolioData';
 
-const Projects = ({ projects }) => {
+const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-6 relative">
-      <div className="container mx-auto max-w-6xl">
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Selected Works</h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-xl">
-            Platforms I've architected from zero to production. Click any card to visit the live platform.
+    <section id="flagships" className="py-24 md:py-32 border-b border-neutral-200 dark:border-neutral-800 transition-colors">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-neutral-200 dark:border-neutral-800">
+          <div>
+            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-3">
+              Section 02 // Engineering Case Studies
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-light text-neutral-950 dark:text-white tracking-tight">
+              Flagship <span className="font-serif italic font-normal">Architectures</span>
+            </h2>
+          </div>
+          <p className="text-sm font-mono text-neutral-500 max-w-md">
+            Selected systems, frameworks, and protocols demonstrating architectural ownership, systems programming, and production scale.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+        {/* Flagship Case Studies List */}
+        <div className="space-y-16">
+          {flagshipProjects.map((project) => (
+            <FlagshipCard key={project.id} project={project} />
           ))}
         </div>
       </div>
@@ -23,3 +33,4 @@ const Projects = ({ projects }) => {
 };
 
 export default Projects;
+

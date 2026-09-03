@@ -1,18 +1,55 @@
 import React from 'react';
-import { getSkillIcon } from '../data/portfolioData';
+import { technicalCompetencies } from '../data/portfolioData';
 
-const Skills = ({ skills }) => {
+const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-6 border-t border-gray-200 dark:border-gray-800">
-      <div className="container mx-auto max-w-5xl text-center">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Technical Arsenal</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {skills.map((skill) => (
-            <div key={skill} className="group flex items-center gap-2 px-5 py-3 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-emerald-500 hover:shadow-lg dark:hover:shadow-emerald-900/20 transition-all cursor-default">
-              <span className="text-gray-400 group-hover:text-emerald-500 transition-colors">
-                {getSkillIcon(skill, "w-5 h-5")}
-              </span>
-              <span className="font-medium text-gray-700 dark:text-gray-300">{skill}</span>
+    <section id="competencies" className="py-24 md:py-32 border-b border-neutral-200 dark:border-neutral-800 transition-colors">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-neutral-200 dark:border-neutral-800">
+          <div>
+            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-3">
+              Section 06 // Technical Domains
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-light text-neutral-950 dark:text-white tracking-tight">
+              Engineering <span className="font-serif italic font-normal">Competencies</span>
+            </h2>
+          </div>
+          <p className="text-sm font-mono text-neutral-500 max-w-md">
+            Languages, frameworks, data engines, and protocol tools utilized across production systems.
+          </p>
+        </div>
+
+        {/* 4-Domain Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {technicalCompetencies.map((comp, idx) => (
+            <div
+              key={idx}
+              className="border border-neutral-200 dark:border-neutral-800 p-8 bg-white dark:bg-neutral-950 space-y-4"
+            >
+              <div className="flex items-baseline justify-between border-b border-neutral-100 dark:border-neutral-800/80 pb-4">
+                <h3 className="font-sans font-medium text-lg text-neutral-950 dark:text-white">
+                  {comp.domain}
+                </h3>
+                <span className="font-mono text-xs text-neutral-400">
+                  0{idx + 1}
+                </span>
+              </div>
+
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+                {comp.summary}
+              </p>
+
+              <div className="pt-2 flex flex-wrap gap-2">
+                {comp.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="font-mono text-xs px-2.5 py-1 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 bg-neutral-50 dark:bg-neutral-900"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -22,3 +59,4 @@ const Skills = ({ skills }) => {
 };
 
 export default Skills;
+
