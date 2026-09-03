@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { personalData } from './data/portfolioData';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import TechCarousel from './components/TechCarousel';
 import Projects from './components/Projects';
 import ProjectArchive from './components/ProjectArchive';
 import About from './components/About';
@@ -51,6 +52,7 @@ const App = () => {
 
       <main>
         <Hero personalData={personalData} scrollToSection={scrollToSection} />
+        <TechCarousel />
         <Projects />
         <ProjectArchive />
         <About personalData={personalData} />
