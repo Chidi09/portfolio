@@ -92,7 +92,9 @@ export const flagshipProjects = [
     tech: ["Rust", "Tokio", "Hyper", "PostgreSQL", "CLI"],
     projectUrl: "https://djangors.vercel.app/",
     githubUrl: "https://github.com/Chidi09/djangors",
-    badge: "Framework · 32 Crates"
+    previewImage: "/previews/djangors.png",
+    badge: "Framework · 32 Crates",
+    previewImage: "/previews/djangors.png"
   },
   {
     id: "spryteo",
@@ -111,7 +113,9 @@ export const flagshipProjects = [
     tech: ["Rust", "WebAssembly", "Node.js (NAPI)", "MCP", "TypeScript"],
     projectUrl: "https://spryteo.vercel.app",
     githubUrl: "https://github.com/chidi09/spryteo",
-    badge: "Open Source · v1.0"
+    previewImage: "/previews/spryteo.png",
+    badge: "Open Source · v1.0",
+    previewImage: "/previews/spryteo.png"
   },
   {
     id: "finnitrex",
@@ -130,7 +134,8 @@ export const flagshipProjects = [
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     projectUrl: "https://www.finnitrex.com",
     githubUrl: "",
-    badge: "Production Client"
+    badge: "Production Client",
+    previewImage: "/previews/finnitrex.png"
   },
   {
     id: "bloom",
@@ -149,7 +154,9 @@ export const flagshipProjects = [
     tech: ["Dart", "Flutter", "bloom_cli", "Signals", "Shorebird OTA", "ORM"],
     projectUrl: "https://bloom-platform-ten.vercel.app/",
     githubUrl: "",
-    badge: "App Platform · Flutter"
+    previewImage: "/previews/bloom.png",
+    badge: "App Platform · Flutter",
+    previewImage: "/previews/bloom.png"
   },
   {
     id: "safemeet",
@@ -168,7 +175,8 @@ export const flagshipProjects = [
     tech: ["Next.js", "Fastify", "Base", "Flow", "EVM"],
     projectUrl: "https://app.safe-meet.click",
     githubUrl: "",
-    badge: "Protocol"
+    badge: "Protocol",
+    previewImage: "/previews/safemeet.png"
   },
   {
     id: "varianlang",
@@ -187,7 +195,9 @@ export const flagshipProjects = [
     tech: ["Compilers", "Systems", "Actors", "Runtime", "TypeScript"],
     projectUrl: "https://varian-lang.vercel.app/",
     githubUrl: "",
-    badge: "Language Design"
+    previewImage: "/previews/varianlang.png",
+    badge: "Language Design",
+    previewImage: "/previews/varianlang.png"
   }
 ];
 
@@ -200,7 +210,8 @@ export const allProjects = [
     tech: ["Dart", "Flutter", "bloom_cli", "Signals", "Shorebird OTA", "Backend ORM"],
     description: "Opinionated application platform for Dart & Flutter: client architecture, CLI tooling, server ORM, and Shorebird OTA.",
     projectUrl: "https://bloom-platform-ten.vercel.app/",
-    githubUrl: ""
+    githubUrl: "",
+    previewImage: "/previews/bloom.png"
   },
   {
     title: "Djangors",
@@ -210,7 +221,8 @@ export const allProjects = [
     tech: ["Rust", "Tokio", "Hyper", "PostgreSQL", "CLI"],
     description: "Batteries-included web framework for Rust (32 crates): ORM, admin site, auth, forms, and Paystack.",
     projectUrl: "https://djangors.vercel.app/",
-    githubUrl: "https://github.com/Chidi09/djangors"
+    githubUrl: "https://github.com/Chidi09/djangors",
+    previewImage: "/previews/djangors.png"
   },
   {
     title: "Spryteo",
@@ -220,7 +232,8 @@ export const allProjects = [
     tech: ["Rust", "WASM", "Node.js (NAPI)", "MCP", "CLI"],
     description: "Local-first vectorization engine converting raster images into clean, animateable, semantically grouped SVGs.",
     projectUrl: "https://spryteo.vercel.app",
-    githubUrl: "https://github.com/chidi09/spryteo"
+    githubUrl: "https://github.com/chidi09/spryteo",
+    previewImage: "/previews/spryteo.png"
   },
   {
     title: "School OS",
@@ -230,7 +243,8 @@ export const allProjects = [
     tech: ["Analog.js", "Angular", "TypeScript", "Paystack", "Moodle"],
     description: "Comprehensive school management platform: automated CGPA, fee ledger, Moodle LMS sync, and report cards.",
     projectUrl: "https://schoolos-peach.vercel.app/",
-    githubUrl: ""
+    githubUrl: "",
+    previewImage: "/previews/schoolos.png"
   },
   {
     title: "Varian Language",
@@ -240,7 +254,8 @@ export const allProjects = [
     tech: ["Compilers", "Actors", "Runtime", "Zenith", "TypeScript"],
     description: "Fast, memory-safe language with native actors, channels, integrated web framework, and UI runtime.",
     projectUrl: "https://varian-lang.vercel.app/",
-    githubUrl: ""
+    githubUrl: "",
+    previewImage: "/previews/varianlang.png"
   },
   {
     title: "NaijaJollof",
@@ -250,7 +265,8 @@ export const allProjects = [
     tech: ["Next.js", "React", "Tailwind CSS", "App Router"],
     description: "Production food ordering & delivery platform with real-time tracking operating across Lagos and Ota.",
     projectUrl: "https://jollofnaija.com/",
-    githubUrl: ""
+    githubUrl: "",
+    previewImage: "/previews/jollofnaija.png"
   },
   {
     title: "GoGo Super-App",
@@ -260,7 +276,8 @@ export const allProjects = [
     tech: ["Next.js", "React", "Paystack", "KYC/BVN", "PostgreSQL", "Tailwind CSS"],
     description: "The all-Nigeria super-app connecting agricultural trade, digital wallets, KYC onboarding, and civic data across 774 LGAs.",
     projectUrl: "https://gogoapp.com.ng/",
-    githubUrl: ""
+    githubUrl: "",
+    previewImage: "/previews/gogoapp.png"
   },
   {
     title: "Market Circle",
@@ -280,7 +297,8 @@ export const allProjects = [
     tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     description: "UK AI governance consultancy platform featuring the proprietary CLARITY Framework™ diagnostic.",
     projectUrl: "https://www.hebrewseleven.com/",
-    githubUrl: ""
+    githubUrl: "",
+    previewImage: "/previews/hebrewseleven.png"
   },
   {
     title: "Finnitrex (UK)",

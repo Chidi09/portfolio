@@ -148,17 +148,43 @@ const ProjectArchive = () => {
                         </a>
                       )}
                       {p.projectUrl ? (
-                        <a
-                          href={p.projectUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`Open live deployment for ${p.title}`}
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono text-neutral-900 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-300 dark:border-neutral-700/80 rounded-md hover:border-neutral-500 dark:hover:border-neutral-500 transition-colors group/link"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-                          <span>Preview</span>
-                          <ArrowUpRight className="w-3 h-3 text-neutral-400 group-hover/link:text-neutral-950 dark:group-hover/link:text-white shrink-0" />
-                        </a>
+                        <div className="relative group/preview-btn inline-block">
+                          <a
+                            href={p.projectUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open live deployment for ${p.title}`}
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono text-neutral-900 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-300 dark:border-neutral-700/80 rounded-md hover:border-neutral-500 dark:hover:border-neutral-500 transition-colors"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                            <span>Preview</span>
+                            <ArrowUpRight className="w-3 h-3 text-neutral-400 group-hover/preview-btn:text-neutral-950 dark:group-hover/preview-btn:text-white shrink-0" />
+                          </a>
+
+                          {p.previewImage && (
+                            <div className="pointer-events-none absolute right-0 bottom-full mb-2 w-64 opacity-0 scale-95 group-hover/preview-btn:opacity-100 group-hover/preview-btn:scale-100 transition-all duration-200 z-50 shadow-2xl rounded-lg overflow-hidden border border-neutral-800 bg-neutral-950">
+                              <div className="px-2.5 py-1.5 bg-neutral-900 border-b border-neutral-800 flex items-center justify-between text-[10px] font-mono text-neutral-400">
+                                <div className="flex items-center gap-1">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
+                                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
+                                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
+                                  <span className="ml-1 truncate max-w-[120px]">{p.title}</span>
+                                </div>
+                                <span className="text-emerald-400 flex items-center gap-1">
+                                  <span className="w-1 h-1 rounded-full bg-emerald-400" /> Ready
+                                </span>
+                              </div>
+                              <div className="aspect-[16/10] w-full bg-neutral-900 overflow-hidden">
+                                <img
+                                  src={p.previewImage}
+                                  alt={p.title}
+                                  className="w-full h-full object-cover object-top"
+                                  loading="lazy"
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       ) : (
                         <span className="text-neutral-400 dark:text-neutral-500 text-[11px] italic font-mono px-2 py-0.5">
                           No preview
